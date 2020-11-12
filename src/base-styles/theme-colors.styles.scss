@@ -1,0 +1,26 @@
+/* Light Theme */
+$primary-colour-light: #000029;
+$foreground-text-colour-light: #fff;
+$text-colour-light: #514849;
+$primary-colour-dark: #fddd80;
+$foreground-text-colour-dark: #000;
+$text-colour-dark: #fff;
+
+:root {
+    --page-background-colour: #fff;
+    --important-object-colour: #{$primary-colour-light};
+    --important-object-text-colour: #{$foreground-text-colour-light};
+    --page-text-colour: #{$text-colour-light};
+}
+
+.dark-theme {
+    --page-background-colour: $text-colour-light;
+    --important-object-colour: $primary-colour-dark;
+    --important-object-text-colour: $foreground-text-colour-dark;
+    --page-text-colour: $text-colour-dark;
+}
+
+.App {
+    background-color: var(--page-background-colour);
+    color: var(--page-text-colour);
+}
