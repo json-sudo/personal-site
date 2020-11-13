@@ -1,0 +1,28 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.hamburger-menu {
+    @include base.widthAndHeight(3rem, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: hidden;
+    background-color: transparent;
+    position: relative;
+    margin: auto 0.5em auto 0.2em;
+
+    @media (min-width: 768px){
+        display: none;
+    }
+
+    & .burger-line {
+        @include base.widthAndHeight(3rem, 2px);
+        background-color: var(--important-object-colour);
+        border-radius: 5px;
+    }
+}
+
+.visually-hidden {
+    @include base.visuallyHidden;
+}

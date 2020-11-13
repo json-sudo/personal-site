@@ -1,0 +1,18 @@
+@use '../../base-styles/theme-colors.styles.scss';
+@use '../../base-styles/base-styles.scss' as base;
+
+.drawer-container {
+    @include base.widthAndHeight(70%, 100vh);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    display: none;
+    flex-direction: column;
+    background-color: var(--page-background-color);
+    box-shadow: 0 0 2px 4px rgba(black, 0.3);
+}
+
+.open {
+    display: flex;
+}

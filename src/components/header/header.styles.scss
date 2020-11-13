@@ -1,0 +1,6 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss' as themer;
+
+.header {
+    @include base.widthAndHeight(100%, 5.5rem);
+}

@@ -1,4 +1,4 @@
-@import './base-styles/theme-colors.styles.scss';
+@use './base-styles/theme-colors.styles.scss';
 .App {
 	min-height: 100vh;
 	font-family: 'Noto Sans JP', sans-serif;
