@@ -7,20 +7,21 @@ $foreground-text-colour-dark: #000;
 $text-colour-dark: #fff;
 
 :root {
-    --page-background-colour: #fff;
+    --page-background-colour: #{$text-colour-dark};
     --important-object-colour: #{$primary-colour-light};
     --important-object-text-colour: #{$foreground-text-colour-light};
     --page-text-colour: #{$text-colour-light};
 }
 
 .dark-theme {
-    --page-background-colour: $text-colour-light;
-    --important-object-colour: $primary-colour-dark;
-    --important-object-text-colour: $foreground-text-colour-dark;
-    --page-text-colour: $text-colour-dark;
+    --page-background-colour: #{$text-colour-light};
+    --important-object-colour: #{$primary-colour-dark};
+    --important-object-text-colour: #{$foreground-text-colour-dark};
+    --page-text-colour: #{$text-colour-dark};
 }
 
 .App {
     background-color: var(--page-background-colour);
     color: var(--page-text-colour);
+    transition: background-color 300ms ease-in, color 300ms ease-in;
 }

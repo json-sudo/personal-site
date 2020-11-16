@@ -1,6 +1,21 @@
 @use '../../base-styles/base-styles.scss' as base;
-@use '../../base-styles/theme-colors.styles.scss' as themer;
+@use '../../base-styles/theme-colors.styles.scss';
 
 .header {
     @include base.widthAndHeight(100%, 5.5rem);
+    display: flex;
+}
+
+.theme-btn-wrapper {
+    @include base.widthAndHeight(10%, 100%);
+
+    svg {
+        @include base.widthAndHeight(100%, 100%);
+        fill: var(--important-object-colour);
+
+        &:focus {
+            outline: none;
+            filter: drop-shadow(0 0 3px var(--important-object-colour));
+        }
+    }
 }
