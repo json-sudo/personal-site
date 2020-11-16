@@ -1,0 +1,118 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.home-page-container {
+    margin-top: 6rem;
+}
+
+.intro-container {
+    height: 40vh;
+    padding: 2rem;
+    position: relative;
+
+    .intro-card {
+        width: 85%;
+        padding: 1.5rem;
+        background-color: var(--page-background-colour);
+        border-radius: 5px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 4px 2px 8px 0 rgba(black,0.23);
+
+        .pic-wrapper {
+            flex: 1;
+            width: 70%;
+
+            img {
+                @include base.widthAndHeight(18rem, 18rem);
+                border-radius: 50%;
+                object-fit: cover;
+                background-position: center;
+            }
+        }
+
+        .intro-actions-container {
+            @include base.widthAndHeight(100%, 5rem);
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                height: 4rem;
+                padding: 0 2rem;
+                display: grid;
+                place-items: center;
+                border-radius: 5px;
+                text-decoration: none;
+                background-color: var(--important-object-colour);
+                color: var(--important-object-text-colour);
+            }
+        }
+
+        .socials-container {
+            @include base.widthAndHeight(100%, 4rem);
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-around;
+
+            svg {
+                @include base.widthAndHeight(3.3rem, 3.3rem);
+                fill: var(--page-text-colour);
+            }
+        }
+    }
+}
+
+.about-me-container{
+    min-height: 30vh;
+    padding: 10rem 2rem 1.5rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--page-text-colour);
+    // background-color: gray;
+    color: var(--important-object-text-colour);
+
+    .page-title {
+        color: var(--important-object-text-colour);
+        // color: black;
+    }
+}
+
+.greet {
+    animation: slideIn 500ms ease forwards, shake 500ms 500ms ease forwards;
+}
+
+.dark-theme {
+    .about-me-container {
+        background-color: gray;
+        color: var(--important-object-text-colour);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        left: 6.25%;
+    }
+}
+
+@keyframes shake {
+    25% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(8deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

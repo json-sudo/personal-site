@@ -4,9 +4,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: background-color 300ms ease-in, color 300ms ease-in;
 }
 
 .App {
 	min-height: 100vh;
 	font-family: 'Noto Sans JP', sans-serif;
+	overflow: hidden;
 }
