@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import DrawerNav from '../drawer/drawer.component'
 import HamburgerMenu from '../hamburger-menu/hamburger-menu.component'
@@ -23,21 +24,36 @@ const Header = ({ appDomElementRef }) => {
 
     return (
         <header className="header">
-            <div className="stuff">kdfdk</div>
+            <div className="title-wrapper">
+                <span className="name">Jason Omemu</span>
+                <span className="job-title">Frontend Engineer</span>
+            </div>
 
-            <DrawerContext.Provider value={drawerState}>
-                <HamburgerMenu />
+            <div className="header-actions">
+                <nav className="header-nav">
+                    <ul>
+                        <li><Link to="/">About Me</Link></li>
+                        <li><Link to="/resume">CV/Resume</Link></li>
+                        <li><Link to="/projects">Projects</Link></li>
+                        <li><Link to="/contact-me">Contact</Link></li>
+                    </ul>
+                </nav>
 
-                <DrawerNav />
-            </DrawerContext.Provider>
+                <div className="theme-btn-wrapper">
+                    <LightThemeIcon
+                        role="button"
+                        title="Change the theme of this site"
+                        focusable
+                        clickHandler={() => changeTheme(appDomElementRef)}
+                    />
+                </div>
 
-            <div className="theme-btn-wrapper">
-                <LightThemeIcon
-                    role="button"
-                    title="Change the theme of this site"
-                    focusable
-                    clickHandler={() => changeTheme(appDomElementRef)}
-                />
+                <DrawerContext.Provider value={drawerState}>
+                    <HamburgerMenu />
+
+                    <DrawerNav />
+                </DrawerContext.Provider>
+
             </div>
         </header>
     )
