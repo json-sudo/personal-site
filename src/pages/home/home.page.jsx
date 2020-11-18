@@ -26,7 +26,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="about-container intro-item">
-                    <h1 className="page-title">Hi, I'm Jason.</h1>
+                    <h1 className="page-title">Hi, I'm <span className="highlight">Jason.</span></h1>
 
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi atque minus error eligendi doloribus ex nesciunt, at aliquam nisi, optio molestiae velit. Reiciendis sapiente sequi eveniet consequatur quia magnam deserunt!</p>
                 </div>

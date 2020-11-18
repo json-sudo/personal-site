@@ -28,6 +28,10 @@
     @media (min-height: 1000px){
         height: 75%;
     }
+
+    @media (min-height: 1400px){
+        height: 85%;
+    }
 }
 
 .intro-card {
@@ -53,6 +57,10 @@
         width: 62%;
     }
 
+    @media (min-width: 1500px){
+        width: 100rem;
+    }
+
     @media (max-height: 500px){
         top: 10%;
     }
@@ -61,6 +69,10 @@
 .intro-item {
     display: flex;
     flex: 1 1 30rem;
+
+    @media (min-width: 1500px){
+        flex: 1 1 40rem;
+    }
 }
     .pic-wrapper {
         width: 55%;
@@ -115,7 +127,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @media (max-width: 330px){
+            @media (max-width: 400px){
                 width: 75%;
             }
 
@@ -144,6 +156,11 @@
         text-align: center;
         margin-bottom: 2rem;
         font-weight: normal;
+
+        .highlight {
+            transition: color 300ms ease-in;
+            color: var(--important-object-colour);
+        }
     }
 }
 
@@ -163,14 +180,22 @@
         bottom: 10%;
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 740px){
         justify-content: center;
+    }
+
+    @media (min-width: 1300px){
+        width: 60%;
+    }
+
+    @media (min-width: 1800px){
+        width: 100rem;
     }
 
     a {
         color: var(--page-text-colour);
 
-        @media (max-width: 600px){
+        @media (max-width: 740px){
             margin-top: 2rem;
         }
     }
@@ -186,11 +211,21 @@
     @media (min-width: 1200px){
         animation: slideInLargerScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
     }
+
+    @media (min-width: 1500px){
+        animation: slideInHugeScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
+    }
 }
 
 .dark-theme {
     .decor {
         background: linear-gradient(-89deg, #777, #666);
+    }
+}
+
+@keyframes slideInHugeScreens {
+    to {
+        left: calc((100% - 100rem) / 2);
     }
 }
 
@@ -229,5 +264,3 @@
         transform: rotate(0);
     }
 }
-
-// TODO - fix card width for really large screens
