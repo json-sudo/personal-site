@@ -5,6 +5,7 @@ import DrawerNav from '../drawer/drawer.component'
 import HamburgerMenu from '../hamburger-menu/hamburger-menu.component'
 
 import LightThemeIcon from '../../assets/svg/light-theme.icon'
+import DarkThemeIcon from '../../assets/svg/dark-theme.icon'
 
 import {DrawerContext} from '../../contexts/drawer.context'
 
@@ -13,11 +14,15 @@ import './header.styles.scss'
 const Header = ({ appDomElementRef }) => {
     const [drawerIsOpen, setDrawerIsOpen] = useState(false)
 
+    const [darkTheme, setDarkTheme] = useState(false)
+
     const drawerState = {
         drawerIsOpen: { get: drawerIsOpen, set: setDrawerIsOpen }
     }
 
     const changeTheme = elementRef => {
+        setDarkTheme(!darkTheme)
+
         elementRef.current.classList.toggle('dark-theme')
     }
 
@@ -51,12 +56,22 @@ const Header = ({ appDomElementRef }) => {
                 </nav>
 
                 <div className="theme-btn-wrapper">
-                    <LightThemeIcon
-                        role="button"
-                        title="Change the theme of this site"
-                        focusable
-                        clickHandler={() => changeTheme(appDomElementRef)}
-                    />
+                    {
+                        darkTheme ?
+                        <DarkThemeIcon
+                            role="button"
+                            title="Change the theme of this site"
+                            focusable
+                            clickHandler={() => changeTheme(appDomElementRef)}
+                        />
+                        :
+                        <LightThemeIcon
+                            role="button"
+                            title="Change the theme of this site"
+                            focusable
+                            clickHandler={() => changeTheme(appDomElementRef)}
+                        />
+                    }
                 </div>
 
                 <DrawerContext.Provider value={drawerState}>

@@ -106,10 +106,12 @@
 
 .theme-btn-wrapper {
     height: 100%;
+    display: grid;
+    place-items: center;
     cursor: pointer;
 
     svg {
-        @include base.widthAndHeight(40px, 100%);
+        @include base.widthAndHeight(40px, 70%);
         fill: var(--important-object-colour);
 
         &:focus {
