@@ -28,7 +28,21 @@ const HomePage = () => {
                 <div className="about-container intro-item">
                     <h1 className="page-title">Hi, I'm <span className="highlight">Jason.</span></h1>
 
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi atque minus error eligendi doloribus ex nesciunt, at aliquam nisi, optio molestiae velit. Reiciendis sapiente sequi eveniet consequatur quia magnam deserunt!</p>
+                    <p>
+                        I'm passionate about building things and solving problems with accessible code.
+                        <br /><br />
+                        I've been interested in tech since I was about 14 years old.
+                        Some years later, I decided to go with coding full time and in 2018, I was part
+                        of some selected Africans for Google's Udacity scholarship program
+                        in partnership with Andela under the web development track. Since then, I've
+                        been coding for the web. I'm currently seeking a full-time role where I can help a
+                        firm reach their goals and learn a lot from other staff as well.
+                        <br /><br />
+                        Outside tech, I love to spend time learning about cultures and languages and I'm sort of a poor
+                        man's polyglot but I aim to finally get to B2 level in some languages in the coming months.
+                        I absolutely love good music and can't believe the talent of some peeople at times. I'm a huge
+                        football (soccer) fan and very much enjoy its tactical and analytical parts.
+                    </p>
                 </div>
 
 

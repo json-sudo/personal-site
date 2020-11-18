@@ -3,6 +3,7 @@
 
 .home-page-container {
     min-height: 100rem;
+    height: 150rem;
     margin-top: 6rem;
     position: relative;
 
@@ -10,8 +11,8 @@
         height: 100vh;
     }
 
-    @media (min-height: 1000px){
-        height: 70vh;
+    @media (min-width: 1200px){
+        height: 110rem;
     }
 }
 
@@ -39,7 +40,7 @@
     min-height: 50rem;
     padding: 2rem;
     position: absolute;
-    top: 8%;
+    top: 5%;
     left: 50%;
     z-index: 2;
     display: flex;
@@ -49,12 +50,11 @@
     box-shadow: 4px 2px 8px 0 rgba(black, 0.23);
 
     @media (min-width: 1000px){
-        width: 70%;
-        top: 20%;
+        top: 10%;
     }
 
     @media (min-width: 1200px){
-        width: 62%;
+        width: 72%;
     }
 
     @media (min-width: 1500px){
@@ -68,7 +68,7 @@
 
 .intro-item {
     display: flex;
-    flex: 1 1 30rem;
+    flex: 1 1 35rem;
 
     @media (min-width: 1500px){
         flex: 1 1 40rem;
@@ -80,6 +80,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: 700px){
+            justify-content: space-evenly;
+        }
 
         img {
             @include base.widthAndHeight(90%, 70%);
@@ -176,6 +180,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-height: 600px){
+        bottom: 3%;
+    }
+
     @media (min-height: 1000px){
         bottom: 10%;
     }
@@ -204,10 +212,6 @@
 .greet {
     animation: slideIn 500ms ease forwards, shake 500ms 500ms ease forwards;
 
-    @media (min-width: 1000px){
-        animation: slideInLargeScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
-    }
-
     @media (min-width: 1200px){
         animation: slideInLargerScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
     }
@@ -231,13 +235,7 @@
 
 @keyframes slideInLargerScreens {
     to {
-        left: 19%;
-    }
-}
-
-@keyframes slideInLargeScreens {
-    to {
-        left: 15%;
+        left: 14%;
     }
 }
 
