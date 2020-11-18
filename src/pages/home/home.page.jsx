@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import CustomButton from '../../components/custom-button/custom-button.component'
+
 import GithubIcon from '../../assets/svg/github.icon'
 import LinkedInIcon from '../../assets/svg/linkedin.icon'
 import TwitterIcon from '../../assets/svg/twitter.icon'
@@ -10,21 +12,29 @@ import './home.styles.scss'
 const HomePage = () => {
     return (
         <div className="home-page-container">
-            <div className="intro-container">
-                <section className="intro-card greet">
-                    <div className="pic-wrapper">
-                        <img
-                            src="https://res.cloudinary.com/dynamicjson/image/upload/v1605545162/IMG-1905_2_p3vo4c.jpg"
-                            alt="Me, smiling and sitting on a chair."
-                        />
-                    </div>
+            <main className="intro-card greet">
+                <div className="pic-wrapper intro-item">
+                    <img
+                        src="https://res.cloudinary.com/dynamicjson/image/upload/v1605545162/IMG-1905_2_p3vo4c.jpg"
+                        alt="Me, smiling and sitting on a chair."
+                    />
 
                     <div className="intro-actions-container">
-                        <Link>Resume</Link>
-                        <Link>Projects</Link>
+                        <Link to="/resume">Resume</Link>
+                        <Link to="/projects">Projects</Link>
                     </div>
+                </div>
 
-                    <div className="socials-container">
+                <div className="about-container intro-item">
+                    <h1 className="page-title">Hi, I'm Jason.</h1>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi atque minus error eligendi doloribus ex nesciunt, at aliquam nisi, optio molestiae velit. Reiciendis sapiente sequi eveniet consequatur quia magnam deserunt!</p>
+                </div>
+
+
+
+                <div className="socials-container intro-item">
+                    <div className="socials-wrapper">
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
@@ -55,14 +65,16 @@ const HomePage = () => {
                             />
                         </a>
                     </div>
-                </section>
-            </div>
-
-            <main className="about-me-container">
-                <h1 className="page-title">Hi There</h1>
-
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet modi perferendis odit quam corporis laborum maiores ipsa optio debitis provident nihil et, error eveniet beatae minus culpa similique dolor fugiat.</p>
+                </div>
             </main>
+
+            <div className="decor" />
+
+            <div className="other-items-container">
+                <CustomButton>Turn off all animations</CustomButton>
+
+                <Link to="/credits">View attribution for icons used on this site.</Link>
+            </div>
         </div>
     )
 }

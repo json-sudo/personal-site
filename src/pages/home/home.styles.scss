@@ -2,117 +2,232 @@
 @use '../../base-styles/theme-colors.styles.scss';
 
 .home-page-container {
+    min-height: 100rem;
     margin-top: 6rem;
-}
-
-.intro-container {
-    height: 40vh;
-    padding: 2rem;
     position: relative;
 
-    .intro-card {
-        width: 85%;
-        padding: 1.5rem;
-        background-color: var(--page-background-colour);
-        border-radius: 5px;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 4px 2px 8px 0 rgba(black,0.23);
+    @media (max-height: 500px) and (min-width: 770px){
+        height: 100vh;
+    }
 
-        .pic-wrapper {
-            flex: 1;
-            width: 70%;
-
-            img {
-                @include base.widthAndHeight(18rem, 18rem);
-                border-radius: 50%;
-                object-fit: cover;
-                background-position: center;
-            }
-        }
-
-        .intro-actions-container {
-            @include base.widthAndHeight(100%, 5rem);
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-around;
-
-            a {
-                height: 4rem;
-                padding: 0 2rem;
-                display: grid;
-                place-items: center;
-                border-radius: 5px;
-                text-decoration: none;
-                background-color: var(--important-object-colour);
-                color: var(--important-object-text-colour);
-            }
-        }
-
-        .socials-container {
-            @include base.widthAndHeight(100%, 4rem);
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: space-around;
-
-            svg {
-                @include base.widthAndHeight(3.3rem, 3.3rem);
-                fill: var(--page-text-colour);
-            }
-        }
+    @media (min-height: 1000px){
+        height: 70vh;
     }
 }
 
-.about-me-container{
-    min-height: 30vh;
-    padding: 10rem 2rem 1.5rem;
-    display: grid;
-    place-items: center;
-    background-color: var(--page-text-colour);
-    // background-color: gray;
-    color: var(--important-object-text-colour);
+.decor {
+    @include base.widthAndHeight(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2rem;
+    background: linear-gradient(89deg, var(--important-object-colour), var(--page-text-colour) 98%);
+    clip-path: polygon(100% 0, 100% 62%, 49% 70%, 0 90%, 0 0);
+
+    @media (min-height: 1000px){
+        height: 75%;
+    }
+}
+
+.intro-card {
+    width: 90%;
+    min-height: 50rem;
+    padding: 2rem;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--page-background-colour);
+    border-radius: 5px;
+    box-shadow: 4px 2px 8px 0 rgba(black, 0.23);
+
+    @media (min-width: 1000px){
+        width: 70%;
+        top: 20%;
+    }
+
+    @media (min-width: 1200px){
+        width: 62%;
+    }
+
+    @media (max-height: 500px){
+        top: 10%;
+    }
+}
+
+.intro-item {
+    display: flex;
+    flex: 1 1 30rem;
+}
+    .pic-wrapper {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            @include base.widthAndHeight(90%, 70%);
+            border-radius: 7px;
+            object-fit: cover;
+            background-position: center;
+        }
+    }
+
+    .intro-actions-container {
+        width: 90%;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+
+        @media (min-width: 600px){
+            height: 7rem;
+        }
+
+        @media (max-width: 330px){
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        a {
+            height: 4rem;
+            padding: 0 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: var(--important-object-colour);
+            color: var(--important-object-text-colour);
+        }
+    }
+
+    .socials-container {
+        @include base.widthAndHeight(100%, 4rem);
+        margin-top: 1.5rem;
+        justify-content: center;
+
+        .socials-wrapper {
+            @include base.widthAndHeight(50%, 100%);
+            display: inherit;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 330px){
+                width: 75%;
+            }
+
+            a {
+                height: 100%;
+                display: grid;
+                place-items: center;
+
+                svg {
+                    @include base.widthAndHeight(3.3rem, 3.3rem);
+                    fill: var(--page-text-colour);
+                }
+            }
+        }
+
+    }
+
+.about-container{
+    width: 45%;
+    margin-top: 2rem;
+    flex-direction: column;
+    background-color: var(--page-background-colour);
+    color: var(--page-text-colour);
 
     .page-title {
-        color: var(--important-object-text-colour);
-        // color: black;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: normal;
+    }
+}
+
+.other-items-container {
+    width: 80%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-height: 1000px){
+        bottom: 10%;
+    }
+
+    @media (max-width: 600px){
+        justify-content: center;
+    }
+
+    a {
+        color: var(--page-text-colour);
+
+        @media (max-width: 600px){
+            margin-top: 2rem;
+        }
     }
 }
 
 .greet {
     animation: slideIn 500ms ease forwards, shake 500ms 500ms ease forwards;
+
+    @media (min-width: 1000px){
+        animation: slideInLargeScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
+    }
+
+    @media (min-width: 1200px){
+        animation: slideInLargerScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
+    }
 }
 
 .dark-theme {
-    .about-me-container {
-        background-color: gray;
-        color: var(--important-object-text-colour);
+    .decor {
+        background: linear-gradient(-89deg, #777, #666);
+    }
+}
+
+@keyframes slideInLargerScreens {
+    to {
+        left: 19%;
+    }
+}
+
+@keyframes slideInLargeScreens {
+    to {
+        left: 15%;
     }
 }
 
 @keyframes slideIn {
     to {
-        left: 6.25%;
+        left: 5%;
     }
 }
 
 @keyframes shake {
     25% {
-        transform: rotate(-8deg);
+        transform: rotate(-6deg);
     }
     50% {
-        transform: rotate(8deg);
+        transform: rotate(6deg);
     }
     75% {
-        transform: rotate(-8deg);
+        transform: rotate(-6deg);
     }
     90% {
-        transform: rotate(8deg);
+        transform: rotate(6deg);
     }
     100% {
         transform: rotate(0);
     }
 }
+
+// TODO - fix card width for really large screens

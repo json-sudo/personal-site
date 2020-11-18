@@ -3,7 +3,7 @@
 
 .header {
     @include base.widthAndHeight(100%, 6rem);
-    padding: 1.3rem 1rem 0;
+    padding: 0 1rem;
     position: fixed;
     left: 0;
     top: 0;
@@ -21,6 +21,10 @@
     display: flex;
     flex-wrap: wrap;
     border-right: 0.5px solid var(--important-object-colour);
+
+    @media (max-width: 330px){
+        width: 60%;
+    }
 
     .name,
     .job-title {
@@ -45,6 +49,10 @@
 
     @media (min-width: 769px){
         width: 55%;
+    }
+
+    @media (max-width: 330px){
+        width: 35%;
     }
 
     .header-nav {
@@ -98,6 +106,7 @@
 
 .theme-btn-wrapper {
     height: 100%;
+    cursor: pointer;
 
     svg {
         @include base.widthAndHeight(40px, 100%);
