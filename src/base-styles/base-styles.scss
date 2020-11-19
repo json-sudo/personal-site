@@ -42,8 +42,8 @@
 $min_screen-width: 25rem;
 $max_screen-width: 80rem;
 $min_font: 1.7rem;
-$max_font: 2rem;
-$mod_1: 1.22; // mobile
+$max_font: 1.9rem;
+$mod_1: 1.20; // mobile
 $mod_2: 1.28; // desktop
 
 /* Styles */
@@ -58,12 +58,17 @@ h1 {
 
 h2 {
     font-size: $mod_1*$mod_1*$mod_1 *1rem;
-    @include fluid-type($min_screen-width, $max_screen-width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+    @include fluid-type($min_screen-width, $max_screen-width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
 }
 
 h3 {
     font-size: $mod_1*$mod_1 *1rem;
-    @include fluid-type($min_screen-width, $max_screen-width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+    @include fluid-type($min_screen-width, $max_screen-width, $mod_1 *$min_font, $mod_2 *$min_font);
+}
+
+h4 {
+    font-size: $mod_1 *1rem;
+    @include fluid-type($min_screen-width, $max_screen-width, $min_font, $min_font);
 }
 
 body {

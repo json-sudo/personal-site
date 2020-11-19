@@ -35,7 +35,7 @@ const DrawerNav = () => {
                 <nav>
                     <ul className="drawer-nav">
                         <li onClick={() => closeDrawer()}><Link to="/">About Me</Link></li>
-                        <li onClick={() => closeDrawer()}><Link to="/">CV/Resume</Link></li>
+                        <li onClick={() => closeDrawer()}><Link to="/resume">CV/Resume</Link></li>
                         <li onClick={() => closeDrawer()}><Link to="/projects">Projects</Link></li>
                         <li onClick={() => closeDrawer()}><Link to="/contact-me">Leave a Message</Link></li>
                     </ul>
