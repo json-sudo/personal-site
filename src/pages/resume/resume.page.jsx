@@ -4,21 +4,23 @@ import { Link } from 'react-router-dom'
 import './resume.styles.scss'
 
 const ResumePage = () => {
-    const scrollToTopRef = useRef(null)
+    const scrollToTopRef = useRef(null),
+          resumePageRef = useRef(null)
 
     const toggleScrollToTop = () => {
-
-        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-            scrollToTopRef.current.setAttribute('style', 'display: initial;')
-        } else {
-            scrollToTopRef.current.setAttribute('style', 'display: none;')
+        if(resumePageRef.current){
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                scrollToTopRef.current.setAttribute('style', 'display: initial;')
+            } else {
+                scrollToTopRef.current.setAttribute('style', 'display: none;')
+            }
         }
     }
 
     document.onscroll = () => toggleScrollToTop()
 
     return (
-        <div className="resume-page-container">
+        <div ref={resumePageRef} className="resume-page-container">
             <a
                 href="/resume#my-resume-page"
                 ref={scrollToTopRef}
