@@ -4,9 +4,10 @@ import { Switch, Route } from 'react-router-dom'
 import Header from './components/header/header.component'
 
 import HomePage from './pages/home/home.page'
+import ResumePage from './pages/resume/resume.page'
+import ProjectsPage from './pages/projects/projects.page'
 
 import './App.scss'
-import ResumePage from './pages/resume/resume.page'
 
 function App() {
 	const appRef = useRef(null)
@@ -17,6 +18,7 @@ function App() {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route path="/resume" component={ResumePage} />
+				<Route exact path="/projects" component={ProjectsPage} />
 			</Switch>
 		</div>
 	);
