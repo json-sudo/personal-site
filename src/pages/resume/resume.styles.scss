@@ -88,6 +88,7 @@
             width: 55%;
             min-width: 30rem;
             margin-top: 2rem;
+            padding-left: 1rem;
             display: flex;
             flex-direction: column;
 
@@ -104,7 +105,7 @@
             }
 
             li {
-                list-style: none;
+                list-style: circle;
             }
         }
 

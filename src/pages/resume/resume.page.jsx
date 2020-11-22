@@ -5,7 +5,7 @@ import './resume.styles.scss'
 
 const ResumePage = () => {
     const scrollToTopRef = useRef(null),
-          resumePageRef = useRef(null)
+          resumePageRef = useRef(null);
 
     const toggleScrollToTop = () => {
         if(resumePageRef.current){
@@ -61,6 +61,8 @@ const ResumePage = () => {
                                 Communications and Digital Economy of Nigeria and a project	bid	for	Nigeria
                                 Investment Promotion Commission.
                                 </li>
+
+                                <li>Collaborated with the team on Gitlab.</li>
                             </ul>
                         </div>
 
@@ -91,8 +93,8 @@ const ResumePage = () => {
 
                             <ul className="detail-items">
                                 <li>Added content for the School Management System project.</li>
-                                <l1>Developed a	page for the app.</l1>
-                                <l1>Worked with	the	team using Microsoft Teams and Git.</l1>
+                                <li>Developed a	page for the app.</li>
+                                <li>Worked with	the	team using Microsoft Teams and Git.</li>
                             </ul>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import cloudinary from 'cloudinary-core'
 import { Link } from 'react-router-dom'
 
 import CustomButton from '../../components/custom-button/custom-button.component'
@@ -9,13 +10,17 @@ import TwitterIcon from '../../assets/svg/twitter.icon'
 
 import './home.styles.scss'
 
+const cl = cloudinary.Cloudinary.new({ cloud_name: 'dynamicjson' })
+
 const HomePage = () => {
+    cl.responsive()
+
     return (
         <div className="home-page-container">
             <main className="intro-card greet">
                 <div className="pic-wrapper intro-item">
                     <img
-                        src="https://res.cloudinary.com/dynamicjson/image/upload/v1605545162/IMG-1905_2_p3vo4c.jpg"
+                        src="https://res.cloudinary.com/dynamicjson/image/upload/w_auto,c_scale/v1605545162/IMG-1905_2_p3vo4c.jpg"
                         alt="Me, smiling and sitting on a chair."
                     />
 

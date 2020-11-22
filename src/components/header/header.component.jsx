@@ -30,9 +30,9 @@ const Header = ({ appDomElementRef }) => {
 
     const toggleShadow = () => {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            mainHeaderRef.current.classList.add('shadow')
+            mainHeaderRef.current.classList.toggle('shadow')
         } else {
-            mainHeaderRef.current.classList.remove('shadow')
+            mainHeaderRef.current.classList.toggle('shadow')
         }
     }
 
