@@ -6,6 +6,7 @@ import Header from './components/header/header.component'
 import HomePage from './pages/home/home.page'
 import ResumePage from './pages/resume/resume.page'
 import ProjectsPage from './pages/projects/projects.page'
+import SpodPage from './pages/spod/spod.page'
 
 import './App.scss'
 
@@ -19,6 +20,7 @@ function App() {
 				<Route exact path="/" component={HomePage} />
 				<Route path="/resume" component={ResumePage} />
 				<Route exact path="/projects" component={ProjectsPage} />
+				<Route path="/projects/spod" component={SpodPage} />
 			</Switch>
 		</div>
 	);

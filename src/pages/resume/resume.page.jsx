@@ -1,34 +1,16 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
+import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component';
+
 import './resume.styles.scss'
 
 const ResumePage = () => {
-    const scrollToTopRef = useRef(null),
-          resumePageRef = useRef(null);
-
-    const toggleScrollToTop = () => {
-        if(resumePageRef.current){
-            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-                scrollToTopRef.current.setAttribute('style', 'display: initial;')
-            } else {
-                scrollToTopRef.current.setAttribute('style', 'display: none;')
-            }
-        }
-    }
-
-    document.onscroll = () => toggleScrollToTop()
+    const resumePageRef = useRef(null);
 
     return (
         <div ref={resumePageRef} className="resume-page-container">
-            <a
-                href="/resume#my-resume-page"
-                ref={scrollToTopRef}
-                aria-hidden="true"
-                className="scroll-to-top"
-            >
-                Go back to top
-            </a>
+            <ScrollToTopButton pathToTop="/resume#my-resume-page" pageRef={resumePageRef} />
 
             <header className="resume-page-header">
                 <h1 id="my-resume-page" className="resume-heading">My Resume</h1>

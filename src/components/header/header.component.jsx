@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import DrawerNav from '../drawer/drawer.component'
@@ -26,20 +26,8 @@ const Header = ({ appDomElementRef }) => {
         elementRef.current.classList.toggle('dark-theme')
     }
 
-    const mainHeaderRef = useRef(null)
-
-    const toggleShadow = () => {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            mainHeaderRef.current.classList.toggle('shadow')
-        } else {
-            mainHeaderRef.current.classList.toggle('shadow')
-        }
-    }
-
-    document.onscroll = () => toggleShadow()
-
     return (
-        <header ref={mainHeaderRef} className="header">
+        <header className="header">
             <div className="title-wrapper">
                 <span className="name">Jason Omemu</span>
                 <span className="job-title">Frontend Engineer</span>

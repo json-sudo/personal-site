@@ -1,0 +1,12 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.projects-footer {
+    @include base.widthAndHeight(100%, 5rem);
+    display: grid;
+    place-items: center;
+
+    a {
+        color: var(--important-object-colour);
+    }
+}

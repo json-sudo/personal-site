@@ -3,6 +3,7 @@
 
 .header {
     @include base.widthAndHeight(100%, 6rem);
+    max-width: 150rem;
     padding: 0 1rem;
     position: fixed;
     left: 0;
@@ -12,6 +13,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--page-background-colour);
+    box-shadow: 0 0 5px rgba(black, 0.5);
+
+    @media (min-width: 1500px){
+        position: sticky;
+        left: calc((100% - 130rem) / 2);
+        box-shadow: none;
+    }
 }
 
 .title-wrapper {
@@ -119,8 +127,4 @@
             filter: drop-shadow(0 0 3px var(--important-object-colour));
         }
     }
-}
-
-.shadow {
-    box-shadow: 0 0 5px 1px rgba(black, 0.5);
 }

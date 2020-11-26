@@ -17,7 +17,7 @@ const ProjectsPage = () => {
                 <section
                     className="project"
                     aria-labelledby="spod-project"
-                    aria-describedby="spod-description"
+                    aria-describedby="spod-summary"
                 >
                     <div className="project-images">
                         <Link role="presentation" to="/projects/spod">
@@ -28,10 +28,10 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
 
-                    <div className="project-description">
+                    <div className="project-summary">
                         <h2 id="spod-project">Spod Integrated</h2>
 
-                        <p id="spod-description">
+                        <p id="spod-summary">
                             A website for a company that deals in commercial cleaning, chemical sales and equipment leasing.
 
                             <Link to="/projects/spod">View Project &#8594;</Link>
@@ -42,7 +42,7 @@ const ProjectsPage = () => {
                 <section
                     className="project"
                     aria-labelledby="crown-clothing-project"
-                    aria-describedby="crown-clothing-description"
+                    aria-describedby="crown-clothing-summary"
                 >
                     <div className="project-images">
                         <Link role="presentation" to="/projects/crown-clothing">
@@ -53,10 +53,10 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
 
-                    <div className="project-description">
+                    <div className="project-summary">
                         <h2 id="crown-clothing-project">Crown Clothing Inc.</h2>
 
-                        <p id="crown-clothing-description">
+                        <p id="crown-clothing-summary">
                             An e-commerce application built with React & Firebase for a
                             fictional clothing company.
                             <Link to="/projects/crown-clothing">View Project &#8594;</Link>
@@ -67,7 +67,7 @@ const ProjectsPage = () => {
                 <section
                     className="project"
                     aria-labelledby="drupex-project"
-                    aria-describedby="drupex-description"
+                    aria-describedby="drupex-summary"
                 >
                     <div className="project-images">
                         <Link role="presentation" to="/projects/drupex">
@@ -78,10 +78,10 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
 
-                    <div className="project-description">
+                    <div className="project-summary">
                         <h2 id="drupex-project">Drupex</h2>
 
-                        <p id="drupex-description">
+                        <p id="drupex-summary">
                             A drug prescription application that uses machine learning to
                             ensure prescriptions are safe and correct for the patient.
 
@@ -93,7 +93,7 @@ const ProjectsPage = () => {
                 <section
                     className="project"
                     aria-labelledby="frogger-project"
-                    aria-describedby="frogger-description"
+                    aria-describedby="frogger-summary"
                 >
                     <div className="project-images">
                         <Link role="presentation" to="/projects/frogger">
@@ -104,10 +104,10 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
 
-                    <div className="project-description">
+                    <div className="project-summary">
                         <h2 id="frogger-project">Frogger, The Remake</h2>
 
-                        <p id="frogger-description">
+                        <p id="frogger-summary">
                             A remake of the classic frogger game for the web.
 
                             <Link to="/projects/frogger">View Project &#8594;</Link>

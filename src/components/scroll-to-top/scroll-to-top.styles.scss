@@ -1,0 +1,23 @@
+@use '../../base-styles/theme-colors.styles.scss';
+
+.scroll-to-top {
+    display: none;
+    padding:  1rem;
+    border-radius: 6px;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 100;
+    background-color: var(--important-object-colour);
+    color: var(--important-object-text-colour);
+    text-decoration: none;
+    transition: box-shadow 300ms ease;
+    box-shadow: 0 0 5px 2px rgba(black, 0.7);
+
+    &:focus,
+    &:hover {
+        outline: none;
+        box-shadow: 0 0 0 1px var(--important-object-colour),
+                    0 0 15px 3px var(--important-object-colour);
+    }
+}
