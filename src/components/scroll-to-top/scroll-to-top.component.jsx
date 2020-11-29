@@ -7,7 +7,7 @@ const ScrollToTopButton = ({ pageRef, pathToTop }) => {
 
     const toggleScrollToTop = () => {
         if(pageRef.current){
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
                 scrollToTopRef.current.setAttribute('style', 'display: initial;')
             } else {
                 scrollToTopRef.current.setAttribute('style', 'display: none;')

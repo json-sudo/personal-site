@@ -1,0 +1,41 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+#crwn-clothing-description {
+    a {
+        color: var(--page-text-colour);
+    }
+}
+
+.crwn-stack {
+    .stack-item {
+        margin-right: 2rem;
+    }
+    @media (min-width: 720px){
+        width: 70%;
+        max-width: 70rem;
+    }
+}
+
+#crwn-img {
+    width: 95%;
+
+    @media (min-width: 900px){
+        width: 75%;
+        max-width: 75rem;
+    }
+}
+
+#crwn-screenshot {
+    @include base.widthAndHeight(35rem, 71rem);
+
+    @media (min-width: 800px){
+        @include base.widthAndHeight(45rem, unset);
+
+    }
+
+    @media (min-width: 1000px){
+        @include base.widthAndHeight(55rem, unset);
+        object-fit: unset;
+    }
+}

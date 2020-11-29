@@ -1,7 +1,7 @@
 @use '../../base-styles/base-styles.scss' as base;
 @use '../../base-styles/theme-colors.styles.scss';
 
-.spod-page-container {
+.project-container {
     margin-top: 6rem;
     padding: 2rem;
     line-height: 3rem;
@@ -39,15 +39,17 @@
         margin-bottom: 3rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @media (min-width: 720px){
-            width: 70%;
+            width: 60%;
             max-width: 70rem;
         }
 
         h2 {
-            align-self: center;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 3rem;
             font-size: larger;
         }
 
@@ -57,6 +59,10 @@
 
             svg {
                 @include base.widthAndHeight(4rem, 4rem);
+            }
+
+            img {
+                @include base.widthAndHeight(9rem, 4rem);
             }
         }
     }
@@ -94,7 +100,7 @@
     .project-homepage-img {
         width: 80%;
         margin: 3rem auto;
-        filter: drop-shadow(0 0 8px black);
+        filter: drop-shadow(0 0 6px rgba(black, 0.4));
     }
 
     .project-region {
@@ -154,9 +160,7 @@
 
     .img-group {
         width: 30rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: grid;
 
         @media (min-width: 800px){
             width: 35rem;
@@ -164,6 +168,7 @@
 
         @media (min-width: 1100px){
             width: 50rem;
+            grid-gap: 3rem;
         }
 
         img {

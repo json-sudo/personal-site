@@ -20,8 +20,12 @@ const Header = ({ appDomElementRef }) => {
         drawerIsOpen: { get: drawerIsOpen, set: setDrawerIsOpen }
     }
 
+    const appRootId = document.querySelector('#root')
+
     const changeTheme = elementRef => {
         setDarkTheme(!darkTheme)
+
+        appRootId.classList.toggle('dark-theme')
 
         elementRef.current.classList.toggle('dark-theme')
     }

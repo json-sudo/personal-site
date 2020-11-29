@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import Header from './components/header/header.component'
 
+import CrownClothingPage from './pages/crown-clothing/crown-clothing.page'
 import HomePage from './pages/home/home.page'
 import ResumePage from './pages/resume/resume.page'
 import ProjectsPage from './pages/projects/projects.page'
@@ -21,9 +22,13 @@ function App() {
 				<Route path="/resume" component={ResumePage} />
 				<Route exact path="/projects" component={ProjectsPage} />
 				<Route path="/projects/spod" component={SpodPage} />
+				<Route path="/projects/crown-clothing" component={CrownClothingPage} />
 			</Switch>
 		</div>
 	);
 }
 
 export default App;
+
+// TODO
+// Code split page routes and figure out how to split css bundles as well

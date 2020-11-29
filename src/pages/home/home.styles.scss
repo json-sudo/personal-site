@@ -17,9 +17,9 @@
 }
 
 .decor {
-    @include base.widthAndHeight(100%, 100%);
-    position: absolute;
-    top: 0;
+    @include base.widthAndHeight(100vw, 100%);
+    position: fixed;
+    top: 6rem;
     left: 0;
     z-index: 1;
     padding: 2rem;

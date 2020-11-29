@@ -9,11 +9,11 @@ const ResumePage = () => {
     const resumePageRef = useRef(null);
 
     return (
-        <div ref={resumePageRef} className="resume-page-container">
+        <div id="my-resume-page" ref={resumePageRef} className="resume-page-container">
             <ScrollToTopButton pathToTop="/resume#my-resume-page" pageRef={resumePageRef} />
 
             <header className="resume-page-header">
-                <h1 id="my-resume-page" className="resume-heading">My Resume</h1>
+                <h1 className="resume-heading">My Resume</h1>
 
                 <Link
                     to="/files/cv-for-jason.pdf"

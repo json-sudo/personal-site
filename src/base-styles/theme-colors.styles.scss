@@ -20,7 +20,8 @@ $text-colour-dark: #fff;
     --page-text-colour: #{$text-colour-dark};
 }
 
-.App {
+.App,
+#root {
     background-color: var(--page-background-colour);
     color: var(--page-text-colour);
 }

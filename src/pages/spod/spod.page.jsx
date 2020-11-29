@@ -13,7 +13,7 @@ const SpodPage = () => {
     const spodPageRef = useRef(null)
 
     return (
-        <div id="spod-project-page" ref={spodPageRef} className="spod-page-container">
+        <div id="spod-project-page" ref={spodPageRef} className="project-container">
             <ScrollToTopButton
                 pathToTop="/projects/spod#spod-project-page"
                 pageRef={spodPageRef}
@@ -31,7 +31,7 @@ const SpodPage = () => {
 
                 <div className="project-actions-container">
                     <div className="project-stack">
-                        <h2>Project Stack &#8594;</h2>
+                        <h2>Project Stack</h2>
 
                         <div className="stack-item">
                             <ReactLogo role="presentation" />
@@ -63,7 +63,7 @@ const SpodPage = () => {
                             target="_blank"
                             href="https://spodintegrated-nigerialimited.com"
                         >
-                            View the site live here.
+                            View a live version here.
                         </a>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ const SpodPage = () => {
 
                     <p id="spod-problems-description">
                         Figuring out the simplest way to handle email requests was easily the biggest challenge I had
-                        because, initially, I hadn't realize that the Hostgator plan didn't cover Node.js code.
+                        because, initially, I hadn't realized that the Hostgator plan didn't cover Node.js code.
                         <br /><br />
                         So after a few hours wondering what I did wrong to get Express and nodemailer mad at me,
                         I found out I had to find a 'non-node' way to handle emails.
