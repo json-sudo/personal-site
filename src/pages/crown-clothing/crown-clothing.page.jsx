@@ -109,7 +109,7 @@ const CrownClothingPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97/spod-cleaning"
+                            href="https://github.com/jaym97/crown-clothing"
                         >
                             Check out the code for this project here.
                         </a>
@@ -135,12 +135,12 @@ const CrownClothingPage = () => {
 
                 <section
                     className="project-region why-region"
-                    aria-labelledby="spod-stack-why-heading"
-                    aria-describedby="spod-stack-why-description"
+                    aria-labelledby="crown-stack-why-heading"
+                    aria-describedby="crown-stack-why-description"
                 >
-                    <h3 id="spod-stack-why-heading">Why I chose the stack I used</h3>
+                    <h3 id="crown-stack-why-heading">Why I chose the stack I used</h3>
 
-                    <p id="spod-stack-why-description">
+                    <p id="crown-stack-why-description">
                         The course covers everything state management from hooks, context api, graphql,
                         and more. After spending time with each one, I decided to leave the ones
                         I felt most comfortable with in the codebase - like a get-together of state management
@@ -154,12 +154,12 @@ const CrownClothingPage = () => {
 
                 <section
                     className="project-region problems-region"
-                    aria-labelledby="spod-problems-heading"
-                    aria-describedby="spod-problems-description"
+                    aria-labelledby="crown-problems-heading"
+                    aria-describedby="crown-problems-description"
                 >
-                    <h3 id="spod-problems-heading">Problems I ran into.</h3>
+                    <h3 id="crown-problems-heading">Problems I ran into.</h3>
 
-                    <p id="spod-problems-description">
+                    <p id="crown-problems-description">
                         The client code of this project was separated into a different folder
                         with the server at the root. So for a little while I had trouble
                         setting up the build command on netlify. Again, I had to figure out
@@ -181,30 +181,30 @@ const CrownClothingPage = () => {
                     <img
                         id="crwn-screenshot"
                         src="https://res.cloudinary.com/dynamicjson/image/upload/v1606661778/crwn-shop-page_gy8ktd.png"
-                        alt="Full-page screenshot of the homepage of the Spod Integrated site."
+                        alt="Full-page screenshot of the shop page of the crown clothing web app."
                     />
 
                     <div className="img-group">
                         <img
                             src="https://res.cloudinary.com/dynamicjson/image/upload/v1606665871/crwn-clothing-mobile2_egcb7k.png"
-                            alt="Screenshot of the cleaning services page."
+                            alt="Screenshot of cart items on a mobile screen. A brown brim, a blue beanie and a brown shearling have been added to the cart."
                         />
 
                         <img
                             src="https://res.cloudinary.com/dynamicjson/image/upload/v1606663602/crwn-checkout-page_se57uv.png"
-                            alt="Screenshot of services page."
+                            alt="Screenshot of the checkout page."
                         />
                     </div>
                 </div>
 
                 <section
                     className="project-region learned-lessons"
-                    aria-labelledby="spod-lessons-heading"
-                    aria-describedby="spod-lessons-description"
+                    aria-labelledby="crown-lessons-heading"
+                    aria-describedby="crown-lessons-description"
                 >
-                    <h3 id="spod-lessons-heading">What I learned</h3>
+                    <h3 id="crown-lessons-heading">What I learned and plan to add</h3>
 
-                    <p id="spod-lessons-description">
+                    <p id="crown-lessons-description">
                         This project helped me learn a lot of state management tools that can be used with
                         react. I, more importantly, learned when each would be more useful than the other
                         as with all programming tools really.
@@ -213,8 +213,8 @@ const CrownClothingPage = () => {
                         little color scheme and separated the sign in and sign up pages. I also worked a
                         lot on the app's accessibility and plan to add a few more features and improvements
                         like a means for the user to see a record of everything they've 'ordered' on the app
-                        to further improve the project's semblance to something in the real world, improve
-                        the contact page's content and others.
+                        to further improve the project's semblance to something in the real world and improve
+                        the contact page's content.
                     </p>
                 </section>
             </main>

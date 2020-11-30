@@ -1,0 +1,21 @@
+@use '../../base-styles/base-styles.scss' as base;
+
+#drupex-screenshot {
+    @media (min-width: 800px){
+        @include base.widthAndHeight(45rem, unset);
+
+    }
+
+    @media (min-width: 1100px){
+        @include base.widthAndHeight(60rem, unset);
+        object-fit: unset;
+    }
+}
+
+#drupex-img-group {
+    grid-gap: 3rem;
+    img {
+        object-fit: unset;
+        height: unset;
+    }
+}

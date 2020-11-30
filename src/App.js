@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import Header from './components/header/header.component'
 
 import CrownClothingPage from './pages/crown-clothing/crown-clothing.page'
+import DrupexPage from './pages/drupex/drupex.page'
 import HomePage from './pages/home/home.page'
 import ResumePage from './pages/resume/resume.page'
 import ProjectsPage from './pages/projects/projects.page'
@@ -21,8 +22,9 @@ function App() {
 				<Route exact path="/" component={HomePage} />
 				<Route path="/resume" component={ResumePage} />
 				<Route exact path="/projects" component={ProjectsPage} />
-				<Route path="/projects/spod" component={SpodPage} />
 				<Route path="/projects/crown-clothing" component={CrownClothingPage} />
+				<Route path="/projects/drupex" component={DrupexPage} />
+				<Route path="/projects/spod" component={SpodPage} />
 			</Switch>
 		</div>
 	);
