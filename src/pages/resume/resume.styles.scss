@@ -2,18 +2,31 @@
 @use '../../base-styles/theme-colors.styles.scss';
 
 .resume-page-container {
+    height: 290rem;
     margin-top: 6rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 330px), (min-width: 900px){
+        height: 315rem;
+    }
 }
 
 .resume-page-header {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
     width: 100%;
     padding: 2rem 2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--important-object-text-colour);
+    color: white;
 
     @media (max-width: 330px){
         padding: 2rem 1rem 0;
@@ -27,9 +40,11 @@
     a {
         padding: 1rem 2rem;
         border-radius: 6px;
-        background-color: var(--important-object-colour);
-        color: var(--important-object-text-colour);
+        background-color: var(--page-background-colour);
+        color: var(--page-text-colour);
         text-decoration: none;
+        border: 0.5px solid darken(#514849, 5%);
+        box-shadow: 0 0 5px 2px rgba(black, 0.23);
 
         &:focus,
         &:hover {
@@ -41,6 +56,12 @@
 }
 
 .resume-categories-container {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    height: auto;
     padding: 1rem;
     display: grid;
     grid-template-rows: auto;
@@ -48,11 +69,6 @@
     .resume-category {
         display: flex;
         flex-direction: column;
-
-        .category-title {
-            padding-left: 2rem;
-            margin-top: 2rem;
-        }
     }
 }
 
@@ -63,45 +79,55 @@
     grid-template-rows: auto;
     gap: 3rem;
 
+    @media (min-width: 700px){
+        min-width: 65rem;
+    }
+
     .category-detail {
-        width: 90%;
-        max-width: 74rem;
-        padding: 2rem 1.5rem;
+        width: 100%;
+        padding: 2rem;
         border-radius: 6px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        background-color: var(--page-background-colour);
         box-shadow: 0 0 5px 2px rgba(black, 0.23);
 
-        @media (max-width: 360px) {
-            width: 95%;
+        @media (max-width: 330px){
+            padding: 2rem 1rem 0;
         }
 
         @media (min-width: 1200px) {
-            width: 100%;
-            padding: 8rem 3rem;
+            padding: 8rem 2rem;
         }
 
         .category-detail-header {
-            width: 40%;
+            width: 30%;
             min-width: 27rem;
+            margin-bottom: 2rem;
 
             @media (max-width: 300px){
                 min-width: 23rem;
             }
+
+            @media (min-width: 1200px) {
+                width: 20%;
+            }
+        }
+
+        .category-title {
+            width: 100%;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .detail-items {
             width: 55%;
-            min-width: 30rem;
+            min-width: 24rem;
             margin-top: 2rem;
             padding-left: 1rem;
             display: flex;
             flex-direction: column;
-
-            @media (max-width: 330px){
-                min-width: 24rem;
-            }
 
             @media (min-width: 500px) and (max-width: 600px){
                 min-width: 37rem;
@@ -109,6 +135,10 @@
 
             @media (min-width: 719px){
                 margin-top: unset;
+            }
+
+            @media (min-width: 1000px) {
+                width: 50%;
             }
 
             li {
@@ -120,5 +150,33 @@
             font-size: larger;
             color: var(--important-object-colour);
         }
+    }
+
+    .title-detail {
+        @media (min-width: 1200px) {
+            padding: 3rem 2rem 8rem;
+        }
+    }
+}
+
+.resume-decor {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    @include base.widthAndHeight(100%, 100%);
+    z-index: 1;
+    background-color: var(--important-object-colour);
+    clip-path: polygon(100% 0, 100% 62%, 49% 70%, 0 90%, 0 0);
+}
+
+.dark-theme {
+    .resume-page-header {
+        a {
+            background-color: var(--important-object-colour);
+            color: var(--important-object-text-colour);
+        }
+    }
+    .resume-decor {
+        background: linear-gradient(-89deg, #555, #444);
     }
 }

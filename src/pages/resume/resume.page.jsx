@@ -12,6 +12,8 @@ const ResumePage = () => {
         <div id="my-resume-page" ref={resumePageRef} className="resume-page-container">
             <ScrollToTopButton pathToTop="/resume#my-resume-page" pageRef={resumePageRef} />
 
+            <div className="resume-decor" />
+
             <header className="resume-page-header">
                 <h1 className="resume-heading">My Resume</h1>
 
@@ -26,14 +28,15 @@ const ResumePage = () => {
 
             <main className="resume-categories-container">
                 <section aria-labelledby="experience-title" className="resume-category">
-                    <h2 className="category-title" id="experience-title">Experience</h2>
-
                     <div className="category-details">
-                        <div className="category-detail">
+                        <div className="category-detail title-detail">
+                            <h2 className="category-title" id="experience-title">Experience</h2>
+
                             <div className="category-detail-header">
                                 <h3 className="category-detail-title">2020-01 - 2020-09</h3>
 
                                 <h4>Intern Front-end Engineer</h4>
+
                                 <span>Sysnet Software Solutions</span>
                             </div>
 
@@ -53,6 +56,7 @@ const ResumePage = () => {
                                 <h3 className="category-detail-title">2018-06 - 2018-12</h3>
 
                                 <h4>Freelance Developer</h4>
+
                                 <span>Shell Nigeria Ltd (Port Harcourt)</span>
                             </div>
 
@@ -70,6 +74,7 @@ const ResumePage = () => {
                                 <h3 className="category-detail-title">2017-07 - 2017-08</h3>
 
                                 <h4>Intern Front-end Engineer</h4>
+
                                 <span>Sysnet Software Solutions</span>
                             </div>
 
@@ -83,10 +88,10 @@ const ResumePage = () => {
                 </section>
 
                 <section aria-labelledby="education-title" className="resume-category">
-                    <h2 className="category-title" id="education-title">Education</h2>
-
                     <div className="category-details">
-                        <div className="category-detail">
+                        <div className="category-detail title-detail">
+                            <h2 className="category-title" id="education-title">Education</h2>
+
                             <div className="category-detail-header">
                                 <h3 className="category-detail-title">2015 - 2019</h3>
 
@@ -101,11 +106,13 @@ const ResumePage = () => {
                 </section>
 
                 <section aria-labelledby="skills-title" className="resume-category">
-                    <h2 className="category-title" id="skills-title">Skillset</h2>
 
                     <div className="category-details">
-                        <div className="category-detail">
-                            <div className="category-detail-header">
+                        <div className="category-detail title-detail">
+                            <h2 className="category-title" id="skills-title">Skillset</h2>
+
+                            <div className="category-detail-header title-header">
+
                                 <h3 className="category-detail-title">Soft Skills</h3>
                             </div>
 

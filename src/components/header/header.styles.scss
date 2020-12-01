@@ -4,7 +4,6 @@
 .header {
     @include base.widthAndHeight(100%, 6rem);
     max-width: 150rem;
-    padding: 0 1rem;
     position: fixed;
     left: 0;
     top: 0;
@@ -52,8 +51,9 @@
 
 .header-actions {
     @include base.widthAndHeight(30%, 100%);
+    padding: 0 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @media (min-width: 769px){
         width: 55%;
