@@ -1,5 +1,33 @@
+@use '../../base-styles/base-styles.scss' as base;
+
 .dark-theme {
     #frogger-stack-item {
         fill: wheat;
+    }
+}
+
+#frogger-img-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    img {
+        @include base.widthAndHeight(40%, 30rem);
+        min-width: 27rem;
+        margin-bottom: 2rem;
+        flex: 0 1 15rem;
+        object-fit: fill;
+
+        @media (min-width: 1000px){
+            min-width: 40rem;
+        }
+    }
+}
+
+#frogger-img {
+    @media (min-width: 900px){
+        width: 35%;
+        max-width: 75rem;
     }
 }
