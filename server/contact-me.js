@@ -5,7 +5,8 @@ const cors = require('cors');
 const credentials = require('./config');
 
 const transport = {
-    host: 'smtp.gmail.com',
+    host: 'smtp.zoho.com',
+    port: '465',
     auth: {
         user: credentials.USERNAME,
         pass: credentials.PASSWORD
@@ -31,18 +32,16 @@ router.post('/send', (req, res, next) => {
 
     const mail = {
       from: `Sender Name: <${email}>`,
-      to: 'jason.omemu@gmail.com',
+      to: 'email-me@jasonthefrontend.dev',
       subject: subject,
       text: content
     }
-
-    console.log(mail.from)
 
     transporter.sendMail(mail, (error) => {
       if (error) {
         res.json({
             status: false,
-            message: 'Your message was not sent.',
+            message: 'I\'m sorry, for some reason your message was not sent. Please check your connection and try to reach out again.',
             errorMessage: error.message
         })
       } else {

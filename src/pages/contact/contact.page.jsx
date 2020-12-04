@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import CustomButton from '../../components/custom-button/custom-button.component'
+import FeedbackModal from '../../components/feedback-modal/feedback-modal.component'
 import FormInput from '../../components/form-input/form-input.component'
 import Loader from '../../components/loader/loader.component'
 
@@ -16,6 +17,7 @@ class ContactPage extends React.Component {
         subject: '',
         message: '',
         loading: false,
+        feedbackMessage: ''
     }
 
     handleInputChange = event => {
@@ -31,6 +33,10 @@ class ContactPage extends React.Component {
             subject: '',
             message: ''
         })
+    }
+
+    closeFeedback = () => {
+        this.setState({ feedbackIsOpen: false })
     }
 
     handleSubmit = event => {
@@ -51,10 +57,18 @@ class ContactPage extends React.Component {
         })
         .then(response => {
             if (response.data.status){
-                this.setState({ loading: false })
-                alert(response.data.message)
+                this.setState({
+                    loading: false,
+                    feedbackIsOpen: true,
+                    feedbackMessage: response.data.message
+                })
             } else if (!response.data.status){
-                alert("we not gucci bro", response.data.errorMessage)
+                this.setState({
+                    loading: false,
+                    feedbackIsOpen: true,
+                    feedbackMessage: response.data.message
+                })
+                console.log(response.data.errorMessage)
             }
         })
     }
@@ -126,6 +140,16 @@ class ContactPage extends React.Component {
                 </main>
 
                 <Loader loading={this.state.loading} />
+
+                {
+                    this.state.feedbackIsOpen ?
+                    <FeedbackModal
+                        flag={this.state.responseFlag}
+                        message={this.state.feedbackMessage}
+                        handleClick={this.closeFeedback}
+                    /> :
+                    ''
+                }
             </div>
         )
     }
