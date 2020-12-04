@@ -1,0 +1,59 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+@mixin shrinkLabel {
+    top: -1.3rem;
+    font-size: large;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+}
+
+.form-input {
+    @include base.widthAndHeight(100%, 4rem);
+    padding: 0 2rem;
+    border: 0.5px solid var(--important-object-colour);
+    border-radius: 0.6rem;
+    background-color: var(--page-background-colour);
+    color: var(--page-text-colour);
+    font-family: inherit;
+    font-size: 1.6rem;
+
+    @media (min-width: 769px){
+        font-size: 1.8rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus ~ .form-input-label,
+    &:active ~ .form-input-label {
+        @include shrinkLabel;
+    }
+}
+
+.form-input-label {
+    position: absolute;
+    top: 2rem;
+    left: 5%;
+    transform: translateY(-50%);
+    transition: top 300ms ease, font-size 300ms ease;
+    color: var(--page-text-colour);
+
+    &.shrink {
+        @include shrinkLabel;
+    }
+
+    .required-symbol {
+        color: var(--important-object-colour);
+    }
+}
+
+.form-group {
+    textarea {
+        height: unset;
+    }
+}

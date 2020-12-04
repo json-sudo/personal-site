@@ -5,31 +5,40 @@ const cors = require('cors');
 const credentials = require('./config');
 
 const transport = {
-    host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
-    port: 587,
+    host: 'smtp.gmail.com',
     auth: {
-    user: credentials.USERNAME,
-    pass: credentials.PASSWORD
-  }
+        user: credentials.USERNAME,
+        pass: credentials.PASSWORD
+    }
 }
 
 const transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('Server is ready to take messages')
+    }
+})
 
 router.post('/send', (req, res, next) => {
     const name = req.body.name
     const email = req.body.email
     const message = req.body.message
     const subject = req.body.subject
-    const content = `name: ${name} \n email: ${email} \n message: ${message} `
+    const content = `name: ${name} \n email: ${email} \n\n message: ${message} `
 
     const mail = {
-      from: name,
+      from: `Sender Name: <${email}>`,
       to: 'jason.omemu@gmail.com',
       subject: subject,
       text: content
     }
 
-    transporter.sendMail(mail, (error, data) => {
+    console.log(mail.from)
+
+    transporter.sendMail(mail, (error) => {
       if (error) {
         res.json({
             status: false,
