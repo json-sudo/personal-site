@@ -1,0 +1,51 @@
+@use '../../base-styles/theme-colors.styles.scss';
+
+.loader-container {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    display: flex;
+    z-index: 120;
+    transform: translateX(-50%);
+
+    .bar {
+        height: 100px;
+        width: 5px;
+        background-color: var(--important-object-colour);
+        margin-right: 10px;
+    }
+
+    .bar1 {
+        animation: shrink 1000ms 500ms ease-in-out infinite;
+    }
+
+    .bar2 {
+        animation: shrink 1000ms 400ms ease-in-out infinite;
+    }
+
+    .bar3 {
+        animation: shrink 1000ms 300ms ease-in-out infinite;
+    }
+
+    .bar4 {
+        animation: shrink 1000ms 200ms ease-in-out infinite;
+    }
+
+    .bar5 {
+        animation: shrink 1000ms 100ms ease-in-out infinite;
+    }
+}
+
+.inactive {
+    display: none;
+}
+
+@keyframes shrink {
+    50% {
+        transform: scaleY(0.4);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}

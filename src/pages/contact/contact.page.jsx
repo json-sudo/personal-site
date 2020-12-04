@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import CustomButton from '../../components/custom-button/custom-button.component'
 import FormInput from '../../components/form-input/form-input.component'
+import Loader from '../../components/loader/loader.component'
 
 import MailDecor from '../../assets/svg/mail.decor'
 
@@ -23,8 +24,18 @@ class ContactPage extends React.Component {
         this.setState({[name]: value})
     }
 
+    clearEmailInputs = () => {
+        this.setState({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        })
+    }
+
     handleSubmit = event => {
         event.preventDefault()
+        this.setState({ loading: true })
 
         let emailData = {
             name: this.state.name,
@@ -40,6 +51,7 @@ class ContactPage extends React.Component {
         })
         .then(response => {
             if (response.data.status){
+                this.setState({ loading: false })
                 alert(response.data.message)
             } else if (!response.data.status){
                 alert("we not gucci bro", response.data.errorMessage)
@@ -104,7 +116,7 @@ class ContactPage extends React.Component {
                             name="message"
                             label="Message"
                             handleChange={this.handleInputChange}
-                            rows={4}
+                            rows={3.5}
                             type="textarea"
                             value={message}
                         />
@@ -113,9 +125,7 @@ class ContactPage extends React.Component {
                     </form>
                 </main>
 
-                <div className="contact-decor">
-
-                </div>
+                <Loader loading={this.state.loading} />
             </div>
         )
     }

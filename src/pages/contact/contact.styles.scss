@@ -28,7 +28,7 @@
     }
 
     @media (min-width: 850px){
-       @include base.widthAndHeight(unset, 50rem);
+       @include base.widthAndHeight(unset, 52rem);
         display: flex;
     }
 
@@ -93,7 +93,7 @@
 
     #medium-decor,
     #big-decor {
-        @include base.widthAndHeight(auto, 50rem);
+        @include base.widthAndHeight(auto, 52rem);
     }
 
     #medium-decor {
