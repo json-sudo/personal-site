@@ -17,7 +17,8 @@ class ContactPage extends React.Component {
         subject: '',
         message: '',
         loading: false,
-        feedbackMessage: ''
+        feedbackMessage: '',
+        responseStatus: false
     }
 
     handleInputChange = event => {
@@ -60,13 +61,17 @@ class ContactPage extends React.Component {
                 this.setState({
                     loading: false,
                     feedbackIsOpen: true,
-                    feedbackMessage: response.data.message
+                    feedbackMessage: response.data.message,
+                    responseStatus: true
                 })
+
+                this.clearEmailInputs()
             } else if (!response.data.status){
                 this.setState({
                     loading: false,
                     feedbackIsOpen: true,
-                    feedbackMessage: response.data.message
+                    feedbackMessage: response.data.message,
+                    responseStatus: false
                 })
                 console.log(response.data.errorMessage)
             }
@@ -144,7 +149,7 @@ class ContactPage extends React.Component {
                 {
                     this.state.feedbackIsOpen ?
                     <FeedbackModal
-                        flag={this.state.responseFlag}
+                        flag={this.state.responseStatus}
                         message={this.state.feedbackMessage}
                         handleClick={this.closeFeedback}
                     /> :

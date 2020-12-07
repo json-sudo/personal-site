@@ -5,8 +5,7 @@ const cors = require('cors');
 const credentials = require('./config');
 
 const transport = {
-    host: 'smtp.zoho.com',
-    port: '465',
+    host: 'smtp.gmail.com',
     auth: {
         user: credentials.USERNAME,
         pass: credentials.PASSWORD
@@ -28,11 +27,11 @@ router.post('/send', (req, res, next) => {
     const email = req.body.email
     const message = req.body.message
     const subject = req.body.subject
-    const content = `name: ${name} \n email: ${email} \n\n message: ${message} `
+    const content = `Name: ${name} \nEmail: ${email} \n\n Message: ${message} `
 
     const mail = {
-      from: `Sender Name: <${email}>`,
-      to: 'email-me@jasonthefrontend.dev',
+      from: email,
+      to: 'jason.omemu@gmail.com',
       subject: subject,
       text: content
     }
@@ -47,7 +46,7 @@ router.post('/send', (req, res, next) => {
       } else {
         res.json({
             status: true,
-            message: 'Your message was sent successfully. Thanks for reaching out.'
+            message: 'Your message was sent successfully. Thanks for reaching out, I\'d get back to you as soon as possible 😊.'
         })
       }
     })
