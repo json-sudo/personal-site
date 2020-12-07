@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
+import { config } from 'react-transition-group'
 import cloudinary from 'cloudinary-core'
 import { Link } from 'react-router-dom'
 
 import CustomButton from '../../components/custom-button/custom-button.component'
+import FeedbackModal from '../../components/feedback-modal/feedback-modal.component'
 
 import GithubIcon from '../../assets/svg/github.icon'
 import LinkedInIcon from '../../assets/svg/linkedin.icon'
@@ -15,9 +17,33 @@ const cl = cloudinary.Cloudinary.new({ cloud_name: 'dynamicjson' })
 const HomePage = () => {
     cl.responsive()
 
+    const [animationsAreEnabled, setanimationsAreEnabled] = useState(true),
+          [feedbackIsOpen, setFeedbackIsOpen] = useState(false);
+
+    const introCardRef = useRef(null)
+
+    const toggleAnimations = () => {
+        setanimationsAreEnabled(!animationsAreEnabled)
+
+        introCardRef.current.classList.toggle('greet')
+        introCardRef.current.classList.toggle('intro-card-animation-off')
+
+        config.disabled = animationsAreEnabled
+
+        document.body.setAttribute('style', 'transition: unset;')
+
+        setFeedbackIsOpen(true)
+
+        setTimeout(() => setFeedbackIsOpen(false), 2500)
+    }
+
+    const closeFeedback = () => {
+        setFeedbackIsOpen(false)
+    }
+
     return (
         <div className="home-page-container">
-            <main className="intro-card greet">
+            <main ref={introCardRef} className="intro-card greet">
                 <div className="pic-wrapper intro-item">
                     <img
                         src="https://res.cloudinary.com/dynamicjson/image/upload/w_auto,c_scale/v1605545162/IMG-1905_2_p3vo4c.jpg"
@@ -90,10 +116,20 @@ const HomePage = () => {
             <div className="decor" />
 
             <div className="other-items-container">
-                <CustomButton>Turn off all animations</CustomButton>
+                <CustomButton onClick={toggleAnimations}>Turn {animationsAreEnabled ? 'off' : 'on'} all animations</CustomButton>
 
                 <Link to="/credits">View attribution for icons used on this site.</Link>
             </div>
+
+            {
+                feedbackIsOpen ?
+                <FeedbackModal
+                    flag={true}
+                    message={animationsAreEnabled ? 'All animations are now turned back on...Do carry on 🙂.' : 'All animations have been turned off...As you were 🙂.'}
+                    handleClick={closeFeedback}
+                /> :
+                ''
+            }
         </div>
     )
 }
