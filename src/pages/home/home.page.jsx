@@ -133,3 +133,5 @@ const HomePage = () => {
 }
 
 export default HomePage
+
+TODO // fix turning off transition property anmation not working and animations coming back on other pages.
