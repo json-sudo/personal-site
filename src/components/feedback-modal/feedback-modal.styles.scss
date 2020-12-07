@@ -16,7 +16,7 @@
     align-items: center;
     transform: translateX(-50%);
     box-shadow: 1px 1px 7px 3px rgba(black, 0.3);
-    background-color: #fff;
+    background-color: var(--page-background-colour);
     color: var(--page-text-colour);
 
     @media (min-width: 600px){

@@ -6,12 +6,17 @@
 	box-sizing: border-box;
 }
 
-body {
+body,
+* {
 	transition: color 100ms ease-in,
 				background-color 300ms ease-in,
 				background 300ms ease-in,
 				box-shadow 300ms ease,
 				fill 300ms ease;
+}
+
+.transitions-off {
+	transition: unset;
 }
 
 .App {

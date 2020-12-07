@@ -30,8 +30,6 @@ const HomePage = () => {
 
         config.disabled = animationsAreEnabled
 
-        document.body.setAttribute('style', 'transition: unset;')
-
         setFeedbackIsOpen(true)
 
         setTimeout(() => setFeedbackIsOpen(false), 2500)
