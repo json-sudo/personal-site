@@ -18,6 +18,11 @@ $text-colour-dark: #fff;
     --important-object-colour: #{$primary-colour-dark};
     --important-object-text-colour: #{$foreground-text-colour-dark};
     --page-text-colour: #{$text-colour-dark};
+
+    img,
+    svg {
+        filter: grayscale(55%) !important;
+    }
 }
 
 .App,
