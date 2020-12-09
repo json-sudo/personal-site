@@ -4,9 +4,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
 	transition: color 100ms ease-in,
 				background-color 300ms ease-in,
 				background 300ms ease-in,
@@ -15,7 +12,9 @@ body {
 }
 
 .transitions-off {
-	transition: unset;
+	* {
+		transition: unset !important;
+	}
 }
 
 .App {

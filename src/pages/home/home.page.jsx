@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useContext, useRef, useState} from 'react'
 import { config } from 'react-transition-group'
 import cloudinary from 'cloudinary-core'
 import { Link } from 'react-router-dom'
@@ -10,6 +10,8 @@ import GithubIcon from '../../assets/svg/github.icon'
 import LinkedInIcon from '../../assets/svg/linkedin.icon'
 import TwitterIcon from '../../assets/svg/twitter.icon'
 
+import animationsAreOnContext from '../../contexts/animations.context'
+
 import './home.styles.scss'
 
 const cl = cloudinary.Cloudinary.new({ cloud_name: 'dynamicjson' })
@@ -17,17 +19,25 @@ const cl = cloudinary.Cloudinary.new({ cloud_name: 'dynamicjson' })
 const HomePage = () => {
     cl.responsive()
 
-    const [animationsAreEnabled, setanimationsAreEnabled] = useState(true),
-          [feedbackIsOpen, setFeedbackIsOpen] = useState(false);
-
+    // setting state to control when feedback is displayed
+    const [feedbackIsOpen, setFeedbackIsOpen] = useState(false)
+    // initializing the reference to the intro card
     const introCardRef = useRef(null)
 
+    // getting the state of animations from the context provider set up in App.js
+    const animationsContext = useContext(animationsAreOnContext),
+          animationsAreEnabled = animationsContext.animationsAreEnabled.get
+
+    const bodyRef = document.body
+
+
     const toggleAnimations = () => {
-        setanimationsAreEnabled(!animationsAreEnabled)
+        // toggling animations state when button is clicked
+        animationsContext.animationsAreEnabled.set(!animationsAreEnabled)
 
-        introCardRef.current.classList.toggle('greet')
-        introCardRef.current.classList.toggle('intro-card-animation-off')
+        bodyRef.classList.toggle('transitions-off')
 
+        // turning off or on animations for react transition group package used by the drawer component
         config.disabled = animationsAreEnabled
 
         setFeedbackIsOpen(true)
@@ -41,7 +51,7 @@ const HomePage = () => {
 
     return (
         <div className="home-page-container">
-            <main ref={introCardRef} className="intro-card greet">
+            <main ref={introCardRef} className={`intro-card ${animationsAreEnabled ? 'greet' : 'intro-card-animation-off'}`}>
                 <div className="pic-wrapper intro-item">
                     <img
                         src="https://res.cloudinary.com/dynamicjson/image/upload/w_auto,c_scale/v1605545162/IMG-1905_2_p3vo4c.jpg"
@@ -133,5 +143,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-TODO // fix turning off transition property anmation not working and animations coming back on other pages.
