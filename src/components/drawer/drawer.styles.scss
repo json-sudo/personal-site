@@ -25,6 +25,11 @@
         background-color: transparent;
         color: var(--important-object-colour);
         font-size: 3em;
+
+        &:focus {
+            outline: none;
+            filter: drop-shadow(0 0 3px var(--important-object-colour));
+        }
     }
 }
 

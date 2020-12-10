@@ -1,0 +1,63 @@
+@use '../../base-styles/theme-colors.styles.scss';
+
+.credits-page-container {
+    margin-top: 6rem;
+    padding: 4rem 1rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+}
+
+table.credits-table {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid var(--page-text-colour);
+    border-radius: 0.6rem;
+    background-color: var(--page-background-colour);
+    text-align: center;
+
+    @media (min-width: 769px){
+        width: 60%;
+    }
+}
+
+table.credits-table th,
+table.credits-table td {
+    border: 1px solid var(--page-text-colour);
+    padding: 0.3rem;
+    text-align: left;
+}
+
+table.credits-table thead {
+    background-color: var(--important-object-colour);
+    color: var(--important-object-text-colour);
+}
+
+table.credits-table thead th {
+    text-align: center;
+}
+
+table.credits-table thead th:first-child {
+    border-top-left-radius: 0.6rem;
+}
+
+table.credits-table thead th:last-child {
+    border-top-right-radius: 0.6rem;
+}
+
+table.credits-table td > svg {
+    width: 3.7rem;
+    fill: var(--page-text-colour);
+}
+
+table.credits-table td > a {
+    color: var(--page-text-colour);
+}
+
+.dark-theme {
+    table.credits-table thead {
+        background-color: gray;
+    }
+}

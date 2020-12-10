@@ -15,6 +15,7 @@ import animationsAreOnContext from './contexts/animations.context'
 import './App.scss'
 
 const ContactPage = lazy(() => import('./pages/contact/contact.page'))
+const CreditsPage = lazy(() => import('./pages/credits/credits.page'))
 const HomePage = lazy(() => import('./pages/home/home.page'))
 const ResumePage = lazy(() => import('./pages/resume/resume.page'))
 
@@ -41,6 +42,7 @@ function App() {
 						</Route>
 						<Route path="/contact-me" component={ContactPage} />
 						<Route path="/resume" component={ResumePage} />
+						<Route path="/credits" component={CreditsPage} />
 					</Switch>
 				</Suspense>
 
