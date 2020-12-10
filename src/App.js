@@ -18,6 +18,7 @@ const ContactPage = lazy(() => import('./pages/contact/contact.page'))
 const CreditsPage = lazy(() => import('./pages/credits/credits.page'))
 const HomePage = lazy(() => import('./pages/home/home.page'))
 const ResumePage = lazy(() => import('./pages/resume/resume.page'))
+const Error404Page = lazy(() => import('./pages/page-not-found/error-404.page'))
 
 function App() {
 	const appRef = useRef(null)
@@ -43,6 +44,7 @@ function App() {
 						<Route path="/contact-me" component={ContactPage} />
 						<Route path="/resume" component={ResumePage} />
 						<Route path="/credits" component={CreditsPage} />
+						<Route component={Error404Page} />
 					</Switch>
 				</Suspense>
 
