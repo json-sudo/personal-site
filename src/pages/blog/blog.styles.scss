@@ -1,0 +1,46 @@
+@use '../../base-styles/theme-colors.styles.scss';
+
+.blog-container,
+.blog-page-container {
+    margin-top: 6rem;
+    padding: 5rem 1rem;
+    min-height: 100vh;
+    background: linear-gradient(89deg, white, darken(white, 5%));
+}
+
+.blog-page-container h1 {
+    margin-bottom: 3rem;
+
+    @media (min-width: 700px){
+        padding-left: 2rem;
+    }
+}
+
+.blog-page-container main {
+    display: grid;
+    grid-template-rows: auto;
+
+    @media (min-width: 700px){
+        padding-left: 2rem;
+    }
+}
+
+.blog-page-container main a {
+    color: var(--important-object-colour);
+}
+
+.blog-page-container main h2 {
+    margin-bottom: 2rem;
+}
+
+.blog-post-preview {
+    @media (min-width: 770px){
+        width: 60%;
+    }
+}
+
+.dark-theme {
+    .blog-page-container {
+        background: linear-gradient(89deg, #514849, darken(#514849, 10%));
+    }
+}
