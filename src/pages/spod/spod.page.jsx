@@ -23,7 +23,7 @@ const SpodPage = () => {
 
             <section aria-describedby="spod-description" className="project-intro">
                 <p id="spod-description">
-                    Spod Integrated is a private company based in the Port Harcourt, Nigeria.
+                    Spod Integrated is a private company based in Port Harcourt, Nigeria.
                     I got the job of creating the company's site which would contain information
                     about their services, what they're about and how to contact them. You can also
                     request for a service directly from the site.

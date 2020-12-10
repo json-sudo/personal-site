@@ -43,6 +43,7 @@ const DrawerNav = () => {
                                     <li onClick={() => closeDrawer()}><Link to="/projects">Projects</Link></li>
                                     <li onClick={() => closeDrawer()}><Link to="/contact-me">Leave a Message</Link></li>
                                     <li onClick={() => closeDrawer()}><Link to="/credits">View Icon Credits</Link></li>
+                                    <li onClick={() => closeDrawer()}><Link to="/blog">Blog</Link></li>
                                 </ul>
                             </nav>
                         </div>

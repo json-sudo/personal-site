@@ -8,7 +8,7 @@
     background: linear-gradient(89deg, white, darken(white, 5%));
 }
 
-.blog-page-container h1 {
+.blog-container h1 {
     margin-bottom: 3rem;
 
     @media (min-width: 700px){
@@ -16,7 +16,7 @@
     }
 }
 
-.blog-page-container main {
+.blog-container main {
     display: grid;
     grid-template-rows: auto;
 
@@ -25,7 +25,7 @@
     }
 }
 
-.blog-page-container main a {
+.blog-container main a {
     color: var(--important-object-colour);
 }
 
@@ -33,14 +33,15 @@
     margin-bottom: 2rem;
 }
 
-.blog-post-preview {
+.blog-post-preview p {
     @media (min-width: 770px){
         width: 60%;
+        max-width: 50rem;
     }
 }
 
 .dark-theme {
-    .blog-page-container {
+    .blog-container {
         background: linear-gradient(89deg, #514849, darken(#514849, 10%));
     }
 }

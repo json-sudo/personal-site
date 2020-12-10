@@ -1,0 +1,10 @@
+.blog-container main {
+    p {
+        width: 90%;
+
+        @media (min-width: 770px){
+            width: 60%;
+            max-width: 70rem;
+        }
+    }
+}

@@ -44,6 +44,7 @@ const Header = ({ appDomElementRef }) => {
                         <li><Link to="/resume">CV/Resume</Link></li>
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/contact-me">Contact</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
                     </ul>
                 </nav>
 
