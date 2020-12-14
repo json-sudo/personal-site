@@ -1,5 +1,9 @@
 @use './base-styles/theme-colors.styles.scss';
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
