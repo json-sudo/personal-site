@@ -53,7 +53,7 @@ class ContactPage extends React.Component {
 
         axios({
             method: 'POST',
-            url: '../../../server/contact-me.js/send',
+            url: 'api/contact-me',
             data: emailData
         })
         .then(response => {
