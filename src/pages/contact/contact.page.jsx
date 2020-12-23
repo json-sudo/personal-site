@@ -57,21 +57,21 @@ class ContactPage extends React.Component {
             data: emailData
         })
         .then(response => {
-            if (response.data.status){
-                this.setState({
-                    loading: false,
-                    feedbackIsOpen: true,
-                    feedbackMessage: response.data.message,
-                    responseStatus: true
-                })
-
-                this.clearEmailInputs()
-            } else if (!response.data.status){
+            if (!response.data.status){
                 this.setState({
                     loading: false,
                     feedbackIsOpen: true,
                     feedbackMessage: response.data.message,
                     responseStatus: false
+                })
+
+                this.clearEmailInputs()
+            } else {
+                this.setState({
+                    loading: false,
+                    feedbackIsOpen: true,
+                    feedbackMessage: response.data.message,
+                    responseStatus: true
                 })
                 console.log(response.data.errorMessage)
             }
