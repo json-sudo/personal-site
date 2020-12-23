@@ -51,11 +51,7 @@ class ContactPage extends React.Component {
             message: this.state.message
         }
 
-        axios({
-            method: 'POST',
-            url: 'api/contact-me',
-            data: emailData
-        })
+        axios.post('/api/contact-me', emailData)
         .then(response => {
             if (!response.data.status){
                 this.setState({
