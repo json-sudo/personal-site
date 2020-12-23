@@ -106,3 +106,5 @@ dist
 
 # Config
 functions/config.js
+
+.env
