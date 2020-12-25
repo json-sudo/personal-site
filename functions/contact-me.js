@@ -5,8 +5,7 @@ exports.handler = function(event, context, callback) {
     let data = JSON.parse(event.body)
 
     let transporter = nodemailer.createTransport({
-        host:"smtp.zoho.com",
-        port:"465",
+        host:"smtp.gmail.com",
         auth:{
             user: USERNAME,
             pass: PASSWORD
@@ -15,7 +14,7 @@ exports.handler = function(event, context, callback) {
 
     transporter.sendMail({
         from: data.email,
-        to: "email-me@jasonthefrontend.dev",
+        to: "jason.omemu.gmail.com",
         subject: data.subject,
         html: `
             <h3>Email from ${data.name} ${data.email}<h3>
