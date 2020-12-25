@@ -53,24 +53,24 @@ class ContactPage extends React.Component {
 
         axios.post('/.netlify/functions/contact-me', emailData)
         .then(response => {
-            if (!response.data.status){
-                this.setState({
-                    loading: false,
-                    feedbackIsOpen: true,
-                    feedbackMessage: response.data.message,
-                    responseStatus: false
-                })
+            this.setState({
+                loading: false,
+                feedbackIsOpen: true,
+                feedbackMessage: response.data.message,
+                responseStatus: true
+            })
 
-                this.clearEmailInputs()
-            } else {
-                this.setState({
-                    loading: false,
-                    feedbackIsOpen: true,
-                    feedbackMessage: response.data.message,
-                    responseStatus: true
-                })
-                console.log(response.data.errorMessage)
-            }
+            this.clearEmailInputs()
+        })
+        .catch(error => {
+            this.setState({
+                loading: false,
+                feedbackIsOpen: true,
+                feedbackMessage: error.response.data.message,
+                responseStatus: false
+            })
+
+            console.log(error.response)
         })
     }
 
