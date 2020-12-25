@@ -51,7 +51,7 @@ class ContactPage extends React.Component {
             message: this.state.message
         }
 
-        axios.post('/api/contact-me', emailData)
+        axios.post('/.netlify/functions/contact-me', emailData)
         .then(response => {
             if (!response.data.status){
                 this.setState({
