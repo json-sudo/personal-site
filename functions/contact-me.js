@@ -1,22 +1,36 @@
 const nodemailer = require('nodemailer');
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 
 require('dotenv').config()
 const { clientId, clientSecret, refreshToken  } = process.env
+
+// fixing acesstoken expiring
+// from https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
+const oauth2Client = new OAuth2(
+    clientId,
+    clientSecret,
+    "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({
+    refresh_token: refreshToken
+});
+const accessToken = oauth2Client.getAccessToken()
 
 exports.handler = function(event, context, callback) {
 
     let data = JSON.parse(event.body)
 
     let transporter = nodemailer.createTransport({
-        host:"smtp.gmail.com",
-        port: 465,
-        secure: true,
+        service: "gmail",
         auth: {
             type: "OAuth2",
             user: "jason.omemu@gmail.com",
             clientId,
             clientSecret,
             refreshToken,
+            accessToken: accessToken
         }
     });
 
