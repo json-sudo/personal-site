@@ -18,6 +18,7 @@ class ContactPage extends React.Component {
         message: '',
         loading: false,
         feedbackMessage: '',
+        feedbackIsOpen: false,
         responseStatus: false
     }
 
@@ -142,15 +143,12 @@ class ContactPage extends React.Component {
 
                 <Loader loading={this.state.loading} />
 
-                {
-                    this.state.feedbackIsOpen ?
-                    <FeedbackModal
-                        flag={this.state.responseStatus}
-                        message={this.state.feedbackMessage}
-                        handleClick={this.closeFeedback}
-                    /> :
-                    ''
-                }
+                <FeedbackModal
+                    flag={this.state.responseStatus}
+                    message={this.state.feedbackMessage}
+                    handleClick={this.closeFeedback}
+                    isOpen={this.state.feedbackIsOpen}
+                />
             </div>
         )
     }

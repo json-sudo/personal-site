@@ -8,18 +8,19 @@ import SuccessIcon from '../../assets/svg/success.icon'
 
 import './feedback-modal.styles.scss'
 
-const FeedbackModal = ({ flag, message, handleClick }) => {
-    const [modalIsOpen, setModalIsOpen] = useState(true)
+const FeedbackModal = ({ flag, message, handleClick, isOpen }) => {
 
     return (
         <>
-            <Backdrop />
+            {
+                isOpen ? <Backdrop /> : ""
+            }
 
-            <Transition in={modalIsOpen} timeout={300}>
+            <Transition in={isOpen} timeout={300}>
                 {
                     state => (
                         <dialog className={`feedback-modal feedback-modal-${state}`}>
-                            <span onClick={() => {handleClick(); setModalIsOpen(false)}} role="button">&#10005;</span>
+                            <span onClick={() => {handleClick()}} role="button">&#10005;</span>
 
                             {
                                 flag ?
