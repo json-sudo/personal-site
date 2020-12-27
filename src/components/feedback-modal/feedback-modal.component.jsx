@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Transition } from 'react-transition-group'
 
 import Backdrop from '../backdrop/backdrop.component'
 
@@ -8,21 +9,29 @@ import SuccessIcon from '../../assets/svg/success.icon'
 import './feedback-modal.styles.scss'
 
 const FeedbackModal = ({ flag, message, handleClick }) => {
+    const [modalIsOpen, setModalIsOpen] = useState(true)
+
     return (
         <>
             <Backdrop />
 
-            <dialog className="feedback-modal">
-                <span onClick={handleClick} role="button">&#10005;</span>
-
+            <Transition in={modalIsOpen} timeout={300}>
                 {
-                    flag ?
-                    <SuccessIcon /> :
-                    <ErrorIcon />
-                }
+                    state => (
+                        <dialog className={`feedback-modal feedback-modal-${state}`}>
+                            <span onClick={() => {handleClick(); setModalIsOpen(false)}} role="button">&#10005;</span>
 
-                <p className="feedback-msg">{message}</p>
-            </dialog>
+                            {
+                                flag ?
+                                <SuccessIcon /> :
+                                <ErrorIcon />
+                            }
+
+                            <p className="feedback-msg">{message}</p>
+                        </dialog>
+                    )
+                }
+            </Transition>
         </>
     )
 }

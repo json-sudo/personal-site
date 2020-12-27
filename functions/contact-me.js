@@ -1,20 +1,28 @@
 const nodemailer = require('nodemailer');
-const { USERNAME, PASSWORD } = process.env
+
+require('dotenv').config()
+const { clientId, clientSecret, refreshToken  } = process.env
+
 exports.handler = function(event, context, callback) {
 
     let data = JSON.parse(event.body)
 
     let transporter = nodemailer.createTransport({
         host:"smtp.gmail.com",
-        auth:{
-            user: USERNAME,
-            pass: PASSWORD
+        port: 465,
+        secure: true,
+        auth: {
+            type: "OAuth2",
+            user: "jason.omemu@gmail.com",
+            clientId,
+            clientSecret,
+            refreshToken,
         }
     });
 
     transporter.sendMail({
         from: data.email,
-        to: "jason.omemu.gmail.com",
+        to: "jason.omemu@gmail.com",
         subject: data.subject,
         html: `
             <h3>Email from ${data.name} ${data.email}<h3>
@@ -25,7 +33,6 @@ exports.handler = function(event, context, callback) {
             callback(error, {
                 body: JSON.stringify({
                     'status': false,
-                    'message': 'I\'m sorry, for some reason your message was not sent. Please check your connection and try to reach out again.',
                 })
             });
         } else {

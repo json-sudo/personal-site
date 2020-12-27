@@ -6,5 +6,5 @@
 [build]
   functions = "functions"
 
-[dev]
-  command = "yarn dev"
+# [dev]
+#   command = "yarn dev"

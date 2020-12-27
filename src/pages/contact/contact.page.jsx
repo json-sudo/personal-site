@@ -66,7 +66,7 @@ class ContactPage extends React.Component {
             this.setState({
                 loading: false,
                 feedbackIsOpen: true,
-                feedbackMessage: error.response.data.message,
+                feedbackMessage: 'I\'m sorry, for some reason your message was not sent. Please check your connection and try to reach out again.',
                 responseStatus: false
             })
 
