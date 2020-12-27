@@ -31,6 +31,9 @@ exports.handler = function(event, context, callback) {
             clientSecret,
             refreshToken,
             accessToken: accessToken
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     });
 
