@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const { google } = require("googleapis");
+const { response } = require('express');
 const OAuth2 = google.auth.OAuth2;
 
 require('dotenv').config()
@@ -24,14 +25,13 @@ exports.handler = function(event, context, callback) {
 
         // wrapping in a promise as getAccessToken requires a callback and doesn't
         // support async/await
-        const accessToken = await new Promise((resolve, reject) => {
-            oauth2Client.getAccessToken((err, token) => {
-                if (err) {
-                    resolve("Failed to create access token");
-                }
-
-                resolve(token);
-            });
+        const accessToken = oauth2Client.getAccessToken().then(
+            response => {
+                return response
+            }
+        )
+        .catch(error => {
+            console.error(error)
         });
 
         let transporter = nodemailer.createTransport({
