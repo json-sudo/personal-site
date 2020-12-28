@@ -26,11 +26,11 @@ exports.handler = function(event, context, callback) {
         // support async/await
         const accessToken = await new Promise((resolve, reject) => {
             oauth2Client.getAccessToken((err, token) => {
-                if (!err) {
-                    resolve(token);
+                if (err) {
+                    resolve("Failed to create access token");
                 }
 
-                reject("Failed to create access token");
+                resolve(token);
             });
         });
 
