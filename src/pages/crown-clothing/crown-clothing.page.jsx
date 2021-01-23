@@ -12,6 +12,7 @@ import SassLogo from '../../assets/svg/sass-logo.icon'
 import StripeIcon from '../../assets/svg/stripe.icon'
 import StyledComponentsIcon from '../../assets/img/styled-components.png'
 
+import '../spod/spod.styles.scss'
 import './crown-clothing.styles.scss'
 
 const CrownClothingPage = () => {

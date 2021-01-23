@@ -9,6 +9,7 @@ import ReactLogo from '../../assets/svg/react-logo.icon'
 import ReduxIcon from '../../assets/svg/redux.icon'
 import SassLogo from '../../assets/svg/sass-logo.icon'
 
+import '../spod/spod.styles.scss'
 import './drupex.styles.scss'
 
 const DrupexPage = () => {

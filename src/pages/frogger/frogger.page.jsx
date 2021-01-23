@@ -7,6 +7,7 @@ import JavaScriptIcon from '../../assets/svg/javascript.icon'
 import ProjectsFooter from '../../components/projects-footer/projects-footer.component'
 import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component'
 
+import '../spod/spod.styles.scss'
 import './frogger.styles.scss'
 
 const FroggerPage = () => {

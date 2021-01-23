@@ -43,25 +43,27 @@
     padding: 2rem;
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 5%;
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(white, 0.5);
-    backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(0.25rem);
     border-radius: 5px;
     box-shadow: 4px 2px 8px 0 rgba(black, 0.23);
 
     @media (min-width: 1000px){
-        top: 10%;
+        top: 9%;
     }
 
     @media (min-width: 1200px){
         width: 72%;
+        left: 14%;
     }
 
     @media (min-width: 1500px){
         width: 100rem;
+        left: calc((100% - 100rem) / 2);
     }
 
     @media (max-height: 500px){
@@ -248,14 +250,14 @@
 }
 
 .greet {
-    animation: slideIn 500ms ease forwards, shake 500ms 500ms ease forwards;
+    animation: shake 650ms ease;
 
     @media (min-width: 1200px){
-        animation: slideInLargerScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
+        animation: shake 650ms 500ms ease forwards;
     }
 
     @media (min-width: 1500px){
-        animation: slideInHugeScreens 500ms ease forwards, shake 500ms 500ms ease forwards;
+        animation: shake 650ms 500ms ease forwards;
     }
 }
 
@@ -281,24 +283,6 @@
             background-color: gray;
             color: black;
         }
-    }
-}
-
-@keyframes slideInHugeScreens {
-    to {
-        left: calc((100% - 100rem) / 2);
-    }
-}
-
-@keyframes slideInLargerScreens {
-    to {
-        left: 14%;
-    }
-}
-
-@keyframes slideIn {
-    to {
-        left: 5%;
     }
 }
 
