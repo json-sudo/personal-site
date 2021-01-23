@@ -111,7 +111,7 @@ const CrownClothingPage = () => {
                             target="_blank"
                             href="https://github.com/jaym97/crown-clothing"
                         >
-                            Check out the code for this project here.
+                            Check out the repository.
                         </a>
 
                         <a

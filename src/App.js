@@ -14,7 +14,6 @@ import HomePage from './pages/home/home.page'
 import ProjectsPage from './pages/projects/projects.page'
 import ResumePage from './pages/resume/resume.page'
 import SpodPage from './pages/spod/spod.page'
-import ToptalBlogpostPage from './pages/toptal-blogpost/toptal-blogpost.page'
 
 import animationsAreOnContext from './contexts/animations.context'
 
@@ -49,7 +48,6 @@ function App() {
 				<Route path="/projects/drupex" component={DrupexPage} />
 				<Route path="/projects/spod" component={SpodPage} />
 				<Route path="/projects/frogger" component={FroggerPage} />
-				<Route path="/blog/toptal-application" component={ToptalBlogpostPage} />
 				<Route component={Error404Page} />
 			</Switch>
 		</div>

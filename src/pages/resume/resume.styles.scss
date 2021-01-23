@@ -90,7 +90,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: var(--page-background-colour);
+        background-color: rgba(white, 0.8);
+        backdrop-filter: blur(0.3rem);
+        color: black;
         box-shadow: 0 0 5px 2px rgba(black, 0.23);
 
         @media (max-width: 330px){
@@ -178,5 +180,10 @@
     }
     .resume-decor {
         background: linear-gradient(-89deg, #555, #444);
+    }
+
+    .category-detail {
+        background-color: rgba(#514849, 0.2);
+        color: white;
     }
 }

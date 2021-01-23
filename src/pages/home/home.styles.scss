@@ -6,7 +6,8 @@
     height: 150rem;
     margin-top: 6rem;
     position: relative;
-    z-index: 5;
+    z-index: 0;
+    background-color: var(--page-background-colour);
 
     @media (max-height: 500px) and (min-width: 770px){
         height: 100vh;
@@ -46,7 +47,8 @@
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--page-background-colour);
+    background-color: rgba(white, 0.5);
+    backdrop-filter: blur(0.2rem);
     border-radius: 5px;
     box-shadow: 4px 2px 8px 0 rgba(black, 0.23);
 
@@ -167,8 +169,8 @@
     width: 45%;
     margin-top: 2rem;
     flex-direction: column;
-    background-color: var(--page-background-colour);
-    color: var(--page-text-colour);
+    // background-color: var(--page-background-colour);
+    color: black;
 
     .page-title {
         text-align: center;
@@ -264,6 +266,14 @@
 .dark-theme {
     .decor {
         background: linear-gradient(-89deg, #777, #666);
+    }
+
+    .intro-card {
+        background-color: rgba(#514849, 0.4);
+    }
+
+    .about-container {
+        color: var(--page-text-colour);
     }
 
     .other-items-container {

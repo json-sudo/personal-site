@@ -81,7 +81,11 @@
 
         a {
             margin-bottom: 3rem;
-            color: var(--important-object-colour);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--important-object-colour);
+            color: var(--important-object-text-colour);
+            text-decoration: none;
         }
     }
 }

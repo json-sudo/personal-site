@@ -68,7 +68,7 @@ const DrupexPage = () => {
                             target="_blank"
                             href="https://github.com/jaym97/drupex"
                         >
-                            Check out the code for this project here.
+                            Check out the repository.
                         </a>
 
                         <a
