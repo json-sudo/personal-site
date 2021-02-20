@@ -171,6 +171,23 @@
     clip-path: polygon(100% 0, 100% 62%, 49% 70%, 0 90%, 0 0);
 }
 
+@media (prefers-color-scheme: dark){
+    .resume-page-header {
+        a {
+            background-color: var(--important-object-colour);
+            color: var(--important-object-text-colour);
+        }
+    }
+    .resume-decor {
+        background: linear-gradient(-89deg, #555, #444);
+    }
+
+    .category-details .category-detail {
+        background-color: rgba(#514849, 0.2);
+        color: white;
+    }
+}
+
 .dark-theme {
     .resume-page-header {
         a {

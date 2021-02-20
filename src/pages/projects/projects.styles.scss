@@ -137,6 +137,13 @@
     }
 }
 
+@media (prefers-color-scheme: dark){
+    .project-images {
+        border: 0.5px solid #514849;
+        background: linear-gradient(45deg, darken(#514849, 18%), darken(#514849, 9%), var(--page-background-colour));
+    }
+}
+
 .dark-theme {
     .project-images {
         border: 0.5px solid #514849;

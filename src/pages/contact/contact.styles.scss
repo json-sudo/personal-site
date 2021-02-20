@@ -159,6 +159,28 @@ form {
 .st19{fill: darken(#B78876, 15%);}
 .st20{fill: #A36957;}
 
+@media (prefers-color-scheme: dark){
+    .st0{fill:#EBEBEB;}
+	.st1{fill:#E0E0E0;}
+	.st2{fill:#F0F0F0;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#FAFAFA;}
+	.st5{display:none;}
+	.st6{display:inline;opacity:0.32;fill:#E0E0E0;}
+	.st8{fill:#FDDD80;}
+	.st9{fill:#FFCE55;}
+	.st12{fill:#A88D4A;}
+    .st16{fill:#FFE197;}
+
+    .contact-form-decor {
+        #small-decor,
+        #medium-decor,
+        #big-decor {
+            fill: darken(gray, 18%);
+        }
+    }
+}
+
 .dark-theme {
     .st0{fill:#EBEBEB;}
 	.st1{fill:#E0E0E0;}
