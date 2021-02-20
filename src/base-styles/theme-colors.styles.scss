@@ -25,6 +25,20 @@ $text-colour-dark: #fff;
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-background-colour: #{$text-colour-light};
+        --important-object-colour: #{$primary-colour-dark};
+        --important-object-text-colour: #{$foreground-text-colour-dark};
+        --page-text-colour: #{$text-colour-dark};
+
+        img,
+        svg {
+            filter: grayscale(55%) !important;
+        }
+    }
+}
+
 .App,
 #root {
     background-color: var(--page-background-colour);

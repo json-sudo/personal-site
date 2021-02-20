@@ -47,8 +47,7 @@
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(white, 0.5);
-    backdrop-filter: blur(0.25rem);
+    background-color: white;
     border-radius: 5px;
     box-shadow: 4px 2px 8px 0 rgba(black, 0.23);
 
@@ -265,6 +264,29 @@
     transform: translateX(-50%);
 }
 
+@media (prefers-color-scheme: dark){
+    .decor {
+        background: linear-gradient(-89deg, #777, #666);
+    }
+
+    .intro-card {
+        background-color: rgba(#514849, 0.4);
+        backdrop-filter: blur(0.4rem);
+
+    }
+
+    .about-container {
+        color: var(--page-text-colour);
+    }
+
+    .other-items-container {
+        a {
+            background-color: gray;
+            color: black;
+        }
+    }
+}
+
 .dark-theme {
     .decor {
         background: linear-gradient(-89deg, #777, #666);
@@ -272,6 +294,8 @@
 
     .intro-card {
         background-color: rgba(#514849, 0.4);
+        backdrop-filter: blur(0.4rem);
+
     }
 
     .about-container {

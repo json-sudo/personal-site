@@ -95,7 +95,7 @@ class ContactPage extends React.Component {
                         </svg>
 
                         <div className="mail-decor-wrapper">
-                            <MailDecor />
+                            <MailDecor role="presentation" />
                         </div>
                     </div>
 

@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     border: hidden;
     background-color: transparent;
     position: relative;
@@ -21,10 +21,18 @@
         filter: drop-shadow(0 0 3px var(--important-object-colour));
     }
 
-    & .burger-line {
+    .burger-line {
         @include base.widthAndHeight(3rem, 2px);
         background-color: var(--important-object-colour);
         border-radius: 5px;
+    }
+
+    .line1 {
+        width: 2rem;
+    }
+
+    .line3 {
+        width: 1rem;
     }
 }
 

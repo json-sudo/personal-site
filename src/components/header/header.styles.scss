@@ -130,3 +130,15 @@
         }
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .header-actions {
+        justify-content: flex-end;
+    }
+    .header-actions .header-nav {
+        width: 100%;
+    }
+    .theme-btn-wrapper {
+        display: none;
+    }
+}
