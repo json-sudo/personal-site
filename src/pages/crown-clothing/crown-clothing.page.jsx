@@ -110,7 +110,7 @@ const CrownClothingPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97/crown-clothing"
+                            href="https://github.com/json-sudo/crown-clothing"
                         >
                             Check out the repository.
                         </a>

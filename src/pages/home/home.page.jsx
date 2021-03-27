@@ -91,7 +91,7 @@ const HomePage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97"
+                            href="https://github.com/json-sudo"
                         >
                             <GithubIcon
                                 title="Check out my repos on Github"

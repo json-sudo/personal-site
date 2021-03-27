@@ -67,7 +67,7 @@ const DrupexPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97/drupex"
+                            href="https://github.com/json-sudo/drupex"
                         >
                             Check out the repository.
                         </a>

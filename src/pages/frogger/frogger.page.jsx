@@ -58,7 +58,7 @@ const FroggerPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97/drupex"
+                            href="https://github.com/json-sudo/Frogger_Remake"
                         >
                             Check out the repository.
                         </a>
@@ -66,7 +66,7 @@ const FroggerPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://jaym97.github.io/Frogger_Remake/"
+                            href="https://json-sudo.github.io/Frogger_Remake/"
                         >
                             View a live version here.
                         </a>

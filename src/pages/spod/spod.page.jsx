@@ -53,7 +53,7 @@ const SpodPage = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://github.com/jaym97/spod-cleaning"
+                            href="https://github.com/json-sudo/spod-cleaning"
                         >
                             Check out the repository.
                         </a>
