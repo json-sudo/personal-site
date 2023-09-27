@@ -102,6 +102,17 @@ const ResumePage = () => {
                                 <li>B.SC. Computer Science</li>
                             </ul>
                         </div>
+                        <div className="category-detail">
+                            <div className="category-detail-header">
+                                <h3 className="category-detail-title">2021 - 2022</h3>
+
+                                <h4>University of Benin</h4>
+                            </div>
+
+                            <ul className="detail-items">
+                                <li>M.SC. Computer Science</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
