@@ -18,7 +18,7 @@ const ResumePage = () => {
                 <h1 className="resume-heading">My Resume</h1>
 
                 <Link
-                    to="/files/cv-for-jason.pdf"
+                    to="/files/my-resume.pdf"
                     download
                     target="_blank"
                 >
