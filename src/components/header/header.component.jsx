@@ -34,7 +34,7 @@ const Header = ({ appDomElementRef }) => {
         <header className="header">
             <div className="title-wrapper">
                 <span className="name">Jason Omemu</span>
-                <span className="job-title">Frontend Engineer</span>
+                <span className="job-title">Senior Software Engineer</span>
             </div>
 
             <div className="header-actions">
@@ -44,7 +44,6 @@ const Header = ({ appDomElementRef }) => {
                         <li><Link to="/resume">CV/Resume</Link></li>
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/contact-me">Contact</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
                     </ul>
                 </nav>
 

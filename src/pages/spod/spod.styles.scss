@@ -2,7 +2,7 @@
 @use '../../base-styles/theme-colors.styles.scss';
 
 .project-container {
-    margin-top: 6rem;
+    margin-top: base.$header-height;
     padding: 2rem;
     line-height: 3rem;
 

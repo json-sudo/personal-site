@@ -1,7 +1,8 @@
 @use '../../base-styles/theme-colors.styles.scss';
+@use '../../base-styles/base-styles.scss' as base;
 
 .credits-page-container {
-    margin-top: 6rem;
+    margin-top: base.$header-height;
     padding: 4rem 1rem;
 
     h1 {

@@ -108,3 +108,5 @@ dist
 functions/config.js
 
 .env
+
+.DS_Store

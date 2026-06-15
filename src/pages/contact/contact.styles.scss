@@ -1,9 +1,10 @@
+@use 'sass:color';
 @use '../../base-styles/base-styles.scss' as base;
 @use '../../base-styles/theme-colors.styles.scss';
 
 .contact-page-container {
     min-height: calc(100vh - 12rem);
-    margin-top: 6rem;
+    margin-top: base.$header-height;
     padding: 6rem 1rem;
     display: grid;
     place-items: center;
@@ -156,7 +157,7 @@ form {
 .st16{fill:#000041;}
 .st17{fill:#455A64;}
 .st18{fill:#F5F5F5;}
-.st19{fill: darken(#B78876, 15%);}
+.st19{fill: color.adjust(#B78876, $lightness: -15%);}
 .st20{fill: #A36957;}
 
 @media (prefers-color-scheme: dark){
@@ -176,7 +177,7 @@ form {
         #small-decor,
         #medium-decor,
         #big-decor {
-            fill: darken(gray, 18%);
+            fill: color.adjust(gray, $lightness: -18%);
         }
     }
 }
@@ -197,6 +198,6 @@ form {
     #small-decor,
     #medium-decor,
     #big-decor {
-        fill: darken(gray, 18%);
+        fill: color.adjust(gray, $lightness: -18%);
     }
 }

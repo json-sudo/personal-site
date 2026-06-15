@@ -1,8 +1,10 @@
+@use 'sass:color';
 @use '../../base-styles/theme-colors.styles.scss';
+@use '../../base-styles/base-styles.scss' as base;
 
 .blog-container,
 .blog-page-container {
-    margin-top: 6rem;
+    margin-top: base.$header-height;
     padding: 5rem 1rem;
     min-height: 100vh;
 }
@@ -41,6 +43,6 @@
 
 .dark-theme {
     .blog-container {
-        background: linear-gradient(89deg, #514849, darken(#514849, 10%));
+        background: linear-gradient(89deg, #514849, color.adjust(#514849, $lightness: -10%));
     }
 }

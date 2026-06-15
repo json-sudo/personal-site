@@ -1,4 +1,5 @@
 @use './base-styles/theme-colors.styles.scss';
+@use './base-styles/base-styles.scss' as base;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 
 html {
@@ -30,5 +31,5 @@ html {
 }
 
 [id] {
-	scroll-margin-top: 6rem;
+	scroll-margin-top: base.$header-height;
 }

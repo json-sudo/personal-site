@@ -2,7 +2,7 @@
 @use '../../base-styles/theme-colors.styles.scss';
 
 .header {
-    @include base.widthAndHeight(100%, 6rem);
+    @include base.widthAndHeight(100%, base.$header-height);
     max-width: 150rem;
     position: fixed;
     left: 0;
@@ -23,7 +23,7 @@
 
 .title-wrapper {
     width: 45%;
-    max-width: 165px;
+    max-width: 200px;
     padding-left: 1rem;
     display: flex;
     flex-wrap: wrap;

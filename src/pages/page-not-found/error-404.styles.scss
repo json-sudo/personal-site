@@ -1,5 +1,7 @@
+@use '../../base-styles/base-styles.scss' as base;
+
 .error-page-container {
-    margin-top: 6rem;
+    margin-top: base.$header-height;
     display: grid;
     place-items: center;
     padding: 2em;

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../../base-styles/base-styles.scss' as base;
 @use '../../base-styles/theme-colors.styles.scss';
 
@@ -43,7 +44,7 @@
         background-color: var(--page-background-colour);
         color: var(--page-text-colour);
         text-decoration: none;
-        border: 0.5px solid darken(#514849, 5%);
+        border: 0.5px solid color.adjust(#514849, $lightness: -5%);
         box-shadow: 0 0 5px 2px rgba(black, 0.23);
 
         &:focus,
@@ -163,7 +164,7 @@
 
 .resume-decor {
     position: fixed;
-    top: 6rem;
+    top: base.$header-height;
     left: 0;
     @include base.widthAndHeight(100%, 100%);
     z-index: 1;
