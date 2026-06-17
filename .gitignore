@@ -69,6 +69,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn Berry local install state (regenerated on yarn install)
+.yarn/install-state.gz
+
 # dotenv environment variables file
 .env
 .env.test

@@ -1,12 +1,12 @@
-import React from 'react'
+import type { SvgIconProps } from '../../types/svg-icon'
 
-const LinkedInIcon = ({ id, role, title, focusable, clickHandler }) => {
+const LinkedInIcon = ({ id, role, title, focusable, clickHandler }: SvgIconProps) => {
     return (
         <svg
             id={id}
             role={role}
             aria-describedby={title}
-            tabIndex={focusable ? 0 : null}
+            tabIndex={focusable ? 0 : undefined}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             onClick={clickHandler}

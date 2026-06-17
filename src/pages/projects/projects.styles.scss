@@ -145,7 +145,7 @@
     }
 }
 
-.dark-theme {
+html[data-theme='dark'] {
     .project-images {
         border: 0.5px solid #514849;
         background: linear-gradient(45deg, color.adjust(#514849, $lightness: -18%), color.adjust(#514849, $lightness: -9%), var(--page-background-colour));

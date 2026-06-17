@@ -182,7 +182,7 @@ form {
     }
 }
 
-.dark-theme {
+html[data-theme='dark'] {
     .st0{fill:#EBEBEB;}
 	.st1{fill:#E0E0E0;}
 	.st2{fill:#F0F0F0;}

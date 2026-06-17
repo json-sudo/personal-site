@@ -1,6 +1,6 @@
 @use '../../base-styles/base-styles.scss' as base;
 
-.dark-theme {
+html[data-theme='dark'] {
     #frogger-stack-item {
         fill: wheat;
     }

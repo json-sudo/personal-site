@@ -1,7 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 import ProjectsFooter from '../../components/projects-footer/projects-footer.component'
-import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component'
 
 import FirebaseIcon from '../../assets/svg/firebase.icon'
 import NetlifyIcon from '../../assets/svg/netlify.icon'
@@ -16,15 +15,8 @@ import '../spod/spod.styles.scss'
 import './crown-clothing.styles.scss'
 
 const CrownClothingPage = () => {
-    const crwnClothingPageRef = useRef(null)
-
     return (
-        <div ref={crwnClothingPageRef} id="crwn-clothing-page" className="project-container">
-            <ScrollToTopButton
-                pathToTop="/projects/crown-clothing#crwn-clothing-page"
-                pageRef={crwnClothingPageRef}
-            />
-
+        <div id="crwn-clothing-page" className="project-container">
             <h1>Crown Clothing Inc.</h1>
 
             <section aria-describedby="crwn-clothing-description" className="project-intro">

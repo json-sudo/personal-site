@@ -1,7 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 import ProjectsFooter from '../../components/projects-footer/projects-footer.component'
-import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component'
 
 import FirebaseIcon from '../../assets/svg/firebase.icon'
 import NetlifyIcon from '../../assets/svg/netlify.icon'
@@ -13,15 +12,8 @@ import '../spod/spod.styles.scss'
 import './drupex.styles.scss'
 
 const DrupexPage = () => {
-    const drupexPageRef = useRef(null)
-
     return (
-        <div ref={drupexPageRef} id="drupex-project-page" className="project-container">
-            <ScrollToTopButton
-                pathToTop="/projects/drupex#drupex-project-page"
-                pageRef={drupexPageRef}
-            />
-
+        <div id="drupex-project-page" className="project-container">
             <h1>Drupex</h1>
 
             <section aria-describedby="drupex-description" className="project-intro">

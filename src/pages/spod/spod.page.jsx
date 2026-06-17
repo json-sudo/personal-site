@@ -1,7 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 import ProjectsFooter from '../../components/projects-footer/projects-footer.component'
-import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component'
 
 import PhpLogo from '../../assets/svg/php-logo.icon'
 import ReactLogo from '../../assets/svg/react-logo.icon'
@@ -10,15 +9,8 @@ import SassLogo from '../../assets/svg/sass-logo.icon'
 import './spod.styles.scss'
 
 const SpodPage = () => {
-    const spodPageRef = useRef(null)
-
     return (
-        <div id="spod-project-page" ref={spodPageRef} className="project-container">
-            <ScrollToTopButton
-                pathToTop="/projects/spod#spod-project-page"
-                pageRef={spodPageRef}
-            />
-
+        <div id="spod-project-page" className="project-container">
             <h1>Spod Integrated</h1>
 
             <section aria-describedby="spod-description" className="project-intro">

@@ -41,7 +41,7 @@
     }
 }
 
-.dark-theme {
+html[data-theme='dark'] {
     .blog-container {
         background: linear-gradient(89deg, #514849, color.adjust(#514849, $lightness: -10%));
     }

@@ -1,46 +1,125 @@
-/* Light Theme */
-$primary-colour-light: #000029;
-$foreground-text-colour-light: #fff;
-$text-colour-light: #514849;
-$primary-colour-dark: #fddd80;
-$foreground-text-colour-dark: #000;
-$text-colour-dark: #fff;
+@mixin light-theme {
+    --p-bg:             #F5F4EF;
+    --p-surface:        #FFFFFF;
+    --p-elevated:       #EEEDEA;
 
-:root {
-    --page-background-colour: #{$text-colour-dark};
-    --important-object-colour: #{$primary-colour-light};
-    --important-object-text-colour: #{$foreground-text-colour-light};
-    --page-text-colour: #{$text-colour-light};
+    --p-heading:        #0E2A2B;
+    --p-body:           #233030;
+    --p-muted:          #5E6E6D;
+
+    --p-accent:         #E0A458;
+    --p-accent-strong:  #9A5B12;
+
+    --p-border:         #E3E7E4;
+    --p-glow:           #45C4B8;
+
+    --p-header-scrolled-bg: rgba(245, 244, 239, 0.8);
+
+    --p-scrollbar-thumb:  #D1D1D1;
+    --p-scrollbar-track:  transparent;
+
+    --background:              #F5F4EF;
+    --foreground:              #233030;
+    --card:                    #FFFFFF;
+    --card-foreground:         #233030;
+    --popover:                 #FFFFFF;
+    --popover-foreground:      #233030;
+    --primary:                 #9A5B12;
+    --primary-foreground:      #FFFFFF;
+    --secondary:               #EEEDEA;
+    --secondary-foreground:    #233030;
+    --muted:                   #EEEDEA;
+    --muted-foreground:        #5E6E6D;
+    --accent:                  #EEEDEA;
+    --accent-foreground:       #233030;
+    --error:                   #d4183d;
+    --error-foreground:        #FFFFFF;
+    --border:                  #E3E7E4;
+    --input:                   #EEEDEA;
+    --ring:                    #E0A458;
+    --radius:                  0.7rem;
+
+    --page-background-colour:        var(--p-bg);
+    --important-object-colour:       var(--p-accent-strong);
+    --important-object-text-colour:  var(--primary-foreground);
+    --page-text-colour:              var(--p-muted);
 }
 
-.dark-theme {
-    --page-background-colour: #{$text-colour-light};
-    --important-object-colour: #{$primary-colour-dark};
-    --important-object-text-colour: #{$foreground-text-colour-dark};
-    --page-text-colour: #{$text-colour-dark};
+@mixin dark-theme {
+    --p-bg:             #0B1A1B;
+    --p-surface:        #112526;
+    --p-elevated:       #173032;
 
-    img,
-    svg {
-        filter: grayscale(55%) !important;
-    }
+    --p-heading:        #EAF0EE;
+    --p-body:           #C8D6D2;
+    --p-muted:          #9FB2AF;
+
+    --p-accent:         #E8C290;
+    --p-accent-strong:  #E8C290;
+
+    --p-border:         #1F3A3B;
+    --p-glow:           #45C4B8;
+
+    --p-header-scrolled-bg: rgba(11, 26, 27, 0.8);
+
+    --p-scrollbar-thumb:  #2E4A4C;
+    --p-scrollbar-track:  transparent;
+
+    --background:              #0B1A1B;
+    --foreground:              #C8D6D2;
+    --card:                    #112526;
+    --card-foreground:         #C8D6D2;
+    --popover:                 #112526;
+    --popover-foreground:      #C8D6D2;
+    --primary:                 #E8C290;
+    --primary-foreground:      #FFFFFF;
+    --secondary:               #173032;
+    --secondary-foreground:    #C8D6D2;
+    --muted:                   #173032;
+    --muted-foreground:        #9FB2AF;
+    --accent:                  #173032;
+    --accent-foreground:       #C8D6D2;
+    --error:                   #7f1d1d;
+    --error-foreground:        #fca5a5;
+    --border:                  #1F3A3B;
+    --input:                   #173032;
+    --ring:                    #45C4B8;
+
+    --page-background-colour:        var(--p-bg);
+    --important-object-colour:       var(--p-accent-strong);
+    --important-object-text-colour:  var(--primary-foreground);
+    --page-text-colour:              var(--p-muted);
+}
+
+:root {
+    @include light-theme;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+html[data-theme='light'] {
+    @include light-theme;
+    color-scheme: light;
+}
+
+html[data-theme='dark'] {
+    @include dark-theme;
+    color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --page-background-colour: #{$text-colour-light};
-        --important-object-colour: #{$primary-colour-dark};
-        --important-object-text-colour: #{$foreground-text-colour-dark};
-        --page-text-colour: #{$text-colour-dark};
-
-        img,
-        svg {
-            filter: grayscale(55%) !important;
-        }
+    :root:not([data-theme]) {
+        @include dark-theme;
+        color-scheme: dark;
     }
 }
 
+html,
+body,
 .App,
 #root {
-    background-color: var(--page-background-colour);
-    color: var(--page-text-colour);
+    background-color: var(--p-bg);
+    color: var(--p-body);
 }

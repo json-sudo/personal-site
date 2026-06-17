@@ -1,19 +1,11 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-
-import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component';
 
 import './resume.styles.scss'
 
 const ResumePage = () => {
-    const resumePageRef = useRef(null);
-
     return (
-        <div id="my-resume-page" ref={resumePageRef} className="resume-page-container">
-            <ScrollToTopButton pathToTop="/resume#my-resume-page" pageRef={resumePageRef} />
-
-            <div className="resume-decor" />
-
+        <div id="my-resume-page" className="resume-page-container">
             <header className="resume-page-header">
                 <h1 className="resume-heading">My Resume</h1>
 

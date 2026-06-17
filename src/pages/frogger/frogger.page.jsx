@@ -1,25 +1,17 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import CssIcon from '../../assets/svg/css.icon'
 import GithubIcon from '../../assets/svg/github.icon'
 import HtmlIcon from '../../assets/svg/html.icon'
 import JavaScriptIcon from '../../assets/svg/javascript.icon'
 
 import ProjectsFooter from '../../components/projects-footer/projects-footer.component'
-import ScrollToTopButton from '../../components/scroll-to-top/scroll-to-top.component'
 
 import '../spod/spod.styles.scss'
 import './frogger.styles.scss'
 
 const FroggerPage = () => {
-    const froggerPageRef = useRef(null)
-
     return (
-        <div ref={froggerPageRef} id="frogger-project-page" className="project-container">
-            <ScrollToTopButton
-                pathToTop="/projects/frogger#frogger-project-page"
-                pageRef={froggerPageRef}
-            />
-
+        <div id="frogger-project-page" className="project-container">
             <h1>Frogger</h1>
 
             <section aria-describedby="drupex-description" className="project-intro">

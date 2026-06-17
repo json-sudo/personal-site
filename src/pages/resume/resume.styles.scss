@@ -162,16 +162,6 @@
     }
 }
 
-.resume-decor {
-    position: fixed;
-    top: base.$header-height;
-    left: 0;
-    @include base.widthAndHeight(100%, 100%);
-    z-index: 1;
-    background-color: var(--important-object-colour);
-    clip-path: polygon(100% 0, 100% 62%, 49% 70%, 0 90%, 0 0);
-}
-
 @media (prefers-color-scheme: dark){
     .resume-page-header {
         a {
@@ -189,7 +179,7 @@
     }
 }
 
-.dark-theme {
+html[data-theme='dark'] {
     .resume-page-header {
         a {
             background-color: var(--important-object-colour);

@@ -1,12 +1,12 @@
-import React from 'react'
+import type { SvgIconProps } from '../../types/svg-icon'
 
-const LightThemeIcon = ({ id, role, title, focusable, clickHandler }) => {
+const LightThemeIcon = ({ id, role, title, focusable, clickHandler }: SvgIconProps) => {
     return (
         <svg
             id={id}
             role={role}
             aria-describedby={title}
-            tabIndex={focusable ? 0 : null}
+            tabIndex={focusable ? 0 : undefined}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 208.948 208.948"
             onClick={clickHandler}

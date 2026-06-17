@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cloudinary from 'cloudinary-core'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,9 @@ import './projects.styles.scss'
 const cl = cloudinary.Cloudinary.new({ cloud_name: 'dynamicjson' })
 
 const ProjectsPage = () => {
-    cl.responsive()
+    useEffect(() => {
+        cl.responsive()
+    }, [])
 
     return (
         <div className="projects-page-container">
