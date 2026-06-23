@@ -147,7 +147,7 @@ $section-y: clamp(5rem, 8vw, 9rem);
 .hero__bg-glow {
     position: absolute;
     left: 15%;
-    @include base.widthAndHeight(80rem, 50rem);
+    @include base.widthAndHeight(60%, 50rem);
     background: radial-gradient(
         70.71% 70.71% at 50% 50%,
         var(--p-glow) 0%,

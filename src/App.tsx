@@ -14,14 +14,11 @@ import './App.scss'
 
 const BlogPage = lazy(() => import('./pages/blog/blog.page'))
 const ContactPage = lazy(() => import('./pages/contact/contact.page'))
-const CrownClothingPage = lazy(() => import('./pages/crown-clothing/crown-clothing.page'))
-const DrupexPage = lazy(() => import('./pages/drupex/drupex.page'))
 const Error404Page = lazy(() => import('./pages/page-not-found/error-404.page'))
-const FroggerPage = lazy(() => import('./pages/frogger/frogger.page'))
 const HomePage = lazy(() => import('./pages/home/home.page'))
+const ProjectPage = lazy(() => import('./pages/project/project.page'))
 const ProjectsPage = lazy(() => import('./pages/projects/projects.page'))
 const ResumePage = lazy(() => import('./pages/resume/resume.page'))
-const SpodPage = lazy(() => import('./pages/spod/spod.page'))
 
 function App() {
 	const [animationsAreEnabled, setAnimationsAreEnabled] = useState(true)
@@ -42,10 +39,7 @@ function App() {
 						<Route path="/resume" component={ResumePage} />
 						<Route exact path="/blog" component={BlogPage} />
 						<Route exact path="/projects" component={ProjectsPage} />
-						<Route path="/projects/crown-clothing" component={CrownClothingPage} />
-						<Route path="/projects/drupex" component={DrupexPage} />
-						<Route path="/projects/spod" component={SpodPage} />
-						<Route path="/projects/frogger" component={FroggerPage} />
+						<Route path="/projects/:slug" component={ProjectPage} />
 						<Route component={Error404Page} />
 					</Switch>
 				</Suspense>

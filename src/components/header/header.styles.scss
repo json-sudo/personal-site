@@ -3,7 +3,6 @@
 
 .header {
     @include base.widthAndHeight(100%, base.$header-height);
-
     position: fixed;
     inset: 0;
     z-index: 99;

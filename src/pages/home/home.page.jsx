@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import DownloadIcon from '../../assets/svg/download.icon'
 import GithubIcon from '../../assets/svg/github.icon'
 import LinkedInIcon from '../../assets/svg/linkedin.icon'
-import RightArrowIcon from '../../assets/svg/right-arrow.icon'
+import RightArrowIcon from '../../assets/svg/right-arrow.icon.tsx'
 
 import './home.styles.scss'
 
