@@ -1,80 +1,44 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import ResumeItem from '../../components/resume-item/resume-item.component'
+import DownloadIcon from '../../assets/svg/download.icon'
 import './resume.styles.scss'
+import { Experiences } from '../../data/roles'
+import ExperienceItem from '../../components/experience-item/experience-item.component'
+
 
 const ResumePage = () => {
     return (
         <div id="my-resume-page" className="resume-page-container">
-            <header className="resume-page-header">
-                <h1 className="resume-heading">My Resume</h1>
-
+            <div className="resume-page-header">
+                <span className="page-label">Resume</span>
                 <Link
                     to="/files/my-resume.pdf"
                     download
                     target="_blank"
                 >
-                    View full CV
+                    <DownloadIcon />
+                    Download PDF
                 </Link>
-            </header>
+                <h1 className="resume-heading">Jason Omemu</h1>
+                <span>Senior Software Engineer</span>
+            </div>
 
             <main className="resume-categories-container">
                 <section aria-labelledby="experience-title" className="resume-category">
                     <div className="category-details">
                         <div className="category-detail title-detail">
-                            <h2 className="category-title" id="experience-title">Experience</h2>
+                            <ResumeItem title='Summary' titleID='summary'>
+                                <p>Senior Software Engineer with 6+ years shipping full-stack SaaS in TypeScript, React, Node.js, PHP, Python and C# from API and data layers to accessible, production-grade Uis that over 250k WPML users and stakeholders rely on daily. Re-engineered customer-facing REST APIs for 20% faster response times, shipped data-driven billing and AI-assisted diagnostic features that cut average support triage from 1 day to 2 hours and kept production releases reliable through automated testing and CI/CD. Deputy team lead who multiplies a team's output through championing clear documentation, clean architecture, automated testing, code review and mentorship.</p>
+                            </ResumeItem>
 
-                            <div className="category-detail-header">
-                                <h3 className="category-detail-title">2020-01 - 2020-09</h3>
-
-                                <h4>Intern Front-end Engineer</h4>
-
-                                <span>Sysnet Software Solutions</span>
-                            </div>
-
-                            <ul className="detail-items">
-                                <li>
-                                Developed the front-end	for	websites involving the Federal Ministry	of
-                                Communications and Digital Economy of Nigeria and a project	bid	for	Nigeria
-                                Investment Promotion Commission.
-                                </li>
-
-                                <li>Collaborated with the team on Gitlab.</li>
-                            </ul>
-                        </div>
-
-                        <div className="category-detail">
-                            <div className="category-detail-header">
-                                <h3 className="category-detail-title">2018-06 - 2018-12</h3>
-
-                                <h4>Freelance Developer</h4>
-
-                                <span>Shell Nigeria Ltd (Port Harcourt)</span>
-                            </div>
-
-                            <ul className="detail-items">
-                                <li>
-                                    Developed the frontend for an archives web app and improved	on the
-                                    existing information system by eliminating time-consuming protocol
-                                    and reducing information retrieval time	from a few days	to minutes.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="category-detail">
-                            <div className="category-detail-header">
-                                <h3 className="category-detail-title">2017-07 - 2017-08</h3>
-
-                                <h4>Intern Front-end Engineer</h4>
-
-                                <span>Sysnet Software Solutions</span>
-                            </div>
-
-                            <ul className="detail-items">
-                                <li>Added content for the School Management System project.</li>
-                                <li>Developed a	page for the app.</li>
-                                <li>Worked with	the	team using Microsoft Teams and Git.</li>
-                            </ul>
+                            <ResumeItem title='Experience' titleID='experience'>
+                                {Experiences.map((experience) => {
+                                    return (
+                                        <ExperienceItem key={experience.id} experience={experience} />
+                                    )
+                                })}
+                            </ResumeItem>
+                            
                         </div>
                     </div>
                 </section>

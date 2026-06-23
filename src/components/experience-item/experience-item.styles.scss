@@ -1,0 +1,41 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.experience-item {
+    margin-bottom: 2.4rem;
+    padding-left: 1.6rem;
+    border-left: 2px solid var(--p-accent);
+}
+
+.experience-item-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h3 {
+        font-size: 1.6rem;
+        color: var(--p-body);
+        line-height: 2.4rem;
+    }
+
+    .start-end-date {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--p-muted);
+    }
+
+    .company {
+        width: 100%;
+        color: var(--p-accent-strong);
+    }
+}
+
+.experience-duties {
+    ul {
+        padding: 0 3rem 0 2rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-family: 'Inter', sans-serif;
+    }
+}

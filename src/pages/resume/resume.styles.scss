@@ -1,148 +1,61 @@
 @use 'sass:color';
 @use '../../base-styles/base-styles.scss' as base;
+@use '../../pages/home/home.styles.scss' as home;
 @use '../../base-styles/theme-colors.styles.scss';
 
 .resume-page-container {
-    height: 290rem;
     margin-top: 6rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (max-width: 330px), (min-width: 900px){
-        height: 315rem;
-    }
+   padding: 0 3.2rem;
+    display: grid;
 }
 
 .resume-page-header {
-    position: absolute;
-    top: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 100%;
-    padding: 2rem 2rem 0;
+    margin-top: 4.8rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: var(--important-object-text-colour);
-    color: white;
+    flex-wrap: wrap;
 
-    @media (max-width: 330px){
-        padding: 2rem 1rem 0;
-    }
-
-    @media (min-width: 800px){
-        width: 70%;
-        max-width: 85rem;
+    .page-label {
+        @include home.tag-pill;
+        height: fit-content;
+        color: var(--p-accent);
+        text-transform: uppercase;
     }
 
     a {
-        padding: 1rem 2rem;
-        border-radius: 6px;
-        background-color: var(--page-background-colour);
-        color: var(--page-text-colour);
-        text-decoration: none;
-        border: 0.5px solid color.adjust(#514849, $lightness: -5%);
-        box-shadow: 0 0 5px 2px rgba(black, 0.23);
+        @include home.button-primary;
+        border-radius: 2rem;
+        padding: 1rem 1.6rem;
+        font-size: 1.4rem;
+    }
 
-        &:focus,
-        &:hover {
-            outline: none;
-            box-shadow: 0 0 0 1px var(--important-object-colour),
-                        0 0 15px 3px var(--important-object-colour);
+    .resume-heading {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        line-height: 4.5rem;
+        letter-spacing: -0.9px;
+        color: var(--p-heading);
+        font-size: clamp(3.6rem, 4.5vw, 4.4rem);
+
+        + span {
+            font-size: 1.8rem;
+            color: var(--p-muted);
+            font-family: 'Inter', sans-serif;
         }
     }
 }
 
 .resume-categories-container {
-    position: absolute;
-    top: 15rem;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
-    height: auto;
-    padding: 1rem;
     display: grid;
-    grid-template-rows: auto;
-
-    .resume-category {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 .category-details {
-    padding: 2rem 0;
     display: grid;
-    place-items: center;
-    grid-template-rows: auto;
-    gap: 3rem;
-
-    @media (min-width: 700px){
-        min-width: 65rem;
-    }
 
     .category-detail {
-        width: 100%;
-        padding: 2rem;
-        border-radius: 6px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        background-color: rgba(white, 0.8);
-        backdrop-filter: blur(0.3rem);
-        color: black;
-        box-shadow: 0 0 5px 2px rgba(black, 0.23);
-
-        @media (max-width: 330px){
-            padding: 2rem 1rem 0;
-        }
-
-        @media (min-width: 1200px) {
-            padding: 8rem 2rem;
-        }
-
-        .category-detail-header {
-            width: 30%;
-            min-width: 27rem;
-            margin-bottom: 2rem;
-
-            @media (max-width: 300px){
-                min-width: 23rem;
-            }
-
-            @media (min-width: 1200px) {
-                width: 20%;
-            }
-        }
-
-        .category-title {
-            width: 100%;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
         .detail-items {
-            width: 55%;
-            min-width: 24rem;
-            margin-top: 2rem;
-            padding-left: 1rem;
-            display: flex;
-            flex-direction: column;
-
-            @media (min-width: 500px) and (max-width: 600px){
-                min-width: 37rem;
-            }
-
-            @media (min-width: 719px){
-                margin-top: unset;
-            }
-
-            @media (min-width: 1000px) {
-                width: 50%;
-            }
 
             li {
                 list-style: circle;

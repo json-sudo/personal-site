@@ -77,7 +77,7 @@ const Header = () => {
                     <nav className="header-nav">
                         <ul>
                             <li><Link to="/">About Me</Link></li>
-                            <li><Link to="/resume">CV/Resume</Link></li>
+                            {/* <li><Link to="/resume">Resume</Link></li> */}
                             <li><Link to="/projects">Projects</Link></li>
                             <li><Link to="/contact-me">Contact</Link></li>
                         </ul>

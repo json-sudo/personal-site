@@ -1,0 +1,35 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.resume-item {
+    padding-top: 4rem;
+    display: grid;
+    gap: 2rem;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        
+        h2 {
+            color: var(--p-accent);
+            font-family: 'JetBrains Mono', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1.5px
+        }
+
+        .resume-title-line {
+            @include base.widthAndHeight(90%, 1px);
+            background-color: var(--p-border);
+
+        }
+    }
+}
+
+.resume-item-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    color: var(--p-muted);
+    line-height: 2.6rem;
+}
