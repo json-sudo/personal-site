@@ -10,12 +10,24 @@ export const Experiences: Role[] = [
         duties: [
             {
                 id: 'otgsDep1',
-                duty: 'Direct full-stack delivery across TypeScript, React, Node.js Python and C# by owning architecture, code quality and execution from API and data layers through production UIs.',
+                duty: 'Direct full-stack delivery across TypeScript, React, Node.js, Python and C# by owning architecture, code quality and execution from API and data layers through production UIs.',
             },
             {
                 id: 'otgsDep2',
                 duty: 'Designed and shipped an AI-first self-service support wizard (React/TypeScript) where ChatGPT produces structured issue summaries with semantic classification and keyword-driven documentation retrieval, paired with parsed environment debug checks on the bug path, cutting average customer triage from 1 day to 2 hours and improving solution-match accuracy by 45%.',
-            }
+            },
+            {
+                id: 'otgsDep3',
+                duty: 'Re-engineered REST and GraphQL API endpoints and database queries across Node.js, Python and C# backends that dropped average API response times by 20% on customer-facing SaaS features.'
+            },
+            {
+                id: 'otgsDep4',
+                duty: 'Drove WCAG/EAA accessibility remediation across 4 React-based SaaS products, standardizing keyboard navigation and screen-reader support and cutting critical accessibility defects by 50% before the compliance deadline.'
+            },
+            {
+                id: 'otgsDep5',
+                duty: 'Mentored engineers and run daily morning code reviews which holds review turnaround to ~1 day preventing blockers while strengthening team standards in API design, testing and SOLID principles.'
+            },
         ]
     },
     {
@@ -32,6 +44,10 @@ export const Experiences: Role[] = [
             {
                 id: 'otgs2',
                 duty: 'Raised release quality by building and maintaining unit, integration and end-to-end (E2E) test suites with Jest, Cypress, Playwright and Codeception across critical product workflows.'
+            },
+            {
+                id: 'otgs3',
+                duty: 'Delivered accessible, pixel-accurate React and TypeScript frontend features from design specs, ensuring responsive, cross-browser behavior and reliable user experiences.'
             }
         ]
     },

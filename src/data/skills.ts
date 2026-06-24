@@ -51,7 +51,7 @@ export const howIWorkSkills: HowIWork = {
     softSkills: {
         id: 'softSkills',
         skills: [
-            'Cross-Functional Collaboration',
+            'Cross-Functional collaboration',
             'Technical mentorship',
             'Code review & architecture',
             'Continuous learning',
