@@ -26,8 +26,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 <p className="project-card__summary">{project.summary}</p>
 
                 <ul className="project-card__tags" aria-label={`${project.title} tech stack`}>
-                    {project.cardTags.map((tag) => (
-                        <li key={tag}>{tag}</li>
+                    {project.cardTags.map((tag, index) => (
+                        <li key={`${tag}-${index}`}>{tag}</li>
                     ))}
                 </ul>
             </div>

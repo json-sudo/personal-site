@@ -4,8 +4,10 @@
 @use '../../base-styles/theme-colors.styles.scss';
 
 .resume-page-container {
+    max-width: 102.4rem;
     margin-top: 6rem;
-   padding: 0 3.2rem;
+    margin-inline: auto;
+    padding: 0 3.2rem;
     display: grid;
 }
 
@@ -48,63 +50,15 @@
 }
 
 .resume-categories-container {
+    margin-bottom: 6.4rem;
     display: grid;
 }
 
-.category-details {
-    display: grid;
-
-    .category-detail {
-        .detail-items {
-
-            li {
-                list-style: circle;
-            }
-        }
-
-        h4 {
-            font-size: larger;
-            color: var(--important-object-colour);
-        }
-    }
-
-    .title-detail {
-        @media (min-width: 1200px) {
-            padding: 3rem 2rem 8rem;
-        }
-    }
+.resume-item.skills .resume-item-content {
+   display: flex;
+   gap: 1.6rem;
 }
 
-@media (prefers-color-scheme: dark){
-    .resume-page-header {
-        a {
-            background-color: var(--important-object-colour);
-            color: var(--important-object-text-colour);
-        }
-    }
-    .resume-decor {
-        background: linear-gradient(-89deg, #555, #444);
-    }
-
-    .category-details .category-detail {
-        background-color: rgba(#514849, 0.2);
-        color: white;
-    }
-}
-
-html[data-theme='dark'] {
-    .resume-page-header {
-        a {
-            background-color: var(--important-object-colour);
-            color: var(--important-object-text-colour);
-        }
-    }
-    .resume-decor {
-        background: linear-gradient(-89deg, #555, #444);
-    }
-
-    .category-detail {
-        background-color: rgba(#514849, 0.2);
-        color: white;
-    }
+.resume-item.education .resume-item__title {
+    white-space: nowrap;
 }

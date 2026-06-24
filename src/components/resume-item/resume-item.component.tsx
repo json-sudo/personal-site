@@ -5,11 +5,12 @@ type ResumeItemProps = {
     title: string;
     titleID: string;
     children: ReactNode;
+    className?: string;
 }
 
-const ResumeItem = ({title, titleID, children}: ResumeItemProps) => {
+const ResumeItem = ({title, titleID, children, className}: ResumeItemProps) => {
     return (
-        <section className='resume-item' aria-labelledby={titleID}>
+        <section className={`resume-item${className ? ` ${className}` : ''}`} aria-labelledby={titleID}>
             <div className="resume-item__title">
                 <h2 id={titleID}>{title}</h2>
                 <div className="resume-title-line" />

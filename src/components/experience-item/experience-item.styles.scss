@@ -1,4 +1,3 @@
-@use '../../base-styles/base-styles.scss' as base;
 @use '../../base-styles/theme-colors.styles.scss';
 
 .experience-item {
@@ -33,9 +32,13 @@
 
 .experience-duties {
     ul {
-        padding: 0 3rem 0 2rem;
+        padding: 0.8rem 3rem 0 2rem;
         font-size: 1.4rem;
         line-height: 2rem;
         font-family: 'Inter', sans-serif;
+    }
+
+    li {
+        margin-bottom: 0.8rem;
     }
 }

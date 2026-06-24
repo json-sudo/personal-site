@@ -1,0 +1,46 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.certificate-item__heading {
+    display: flex;
+    gap: 1.6rem;
+
+    svg {
+        @include base.widthAndHeight(2rem, 2rem);
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--p-heading);
+    }
+}
+
+.certificate-item__details {
+    padding-inline: 3.6rem;
+    display: flex;
+    gap: 0.8rem;
+
+    span {
+        font-size: 1.2rem;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--p-muted);
+        line-height: 1.6rem;
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            @include base.widthAndHeight(0.2rem, 0.2rem);
+            border-radius: 50%;
+            background-color: var(--p-muted);
+        }
+    }
+}

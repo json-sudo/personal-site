@@ -1,0 +1,28 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../pages/home/home.styles.scss' as home;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.skill-list {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.skill-list__title {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--p-accent);
+}
+
+.skill-list__items {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    li {
+        @include home.tag-pill;
+    }
+}

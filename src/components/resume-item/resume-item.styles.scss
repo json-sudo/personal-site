@@ -8,8 +8,8 @@
 
     &__title {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 0.8rem;
         text-transform: uppercase;
         
         h2 {
@@ -20,9 +20,9 @@
         }
 
         .resume-title-line {
-            @include base.widthAndHeight(90%, 1px);
+            height: 1px;
+            flex: 1;
             background-color: var(--p-border);
-
         }
     }
 }

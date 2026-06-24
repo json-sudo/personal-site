@@ -4,4 +4,5 @@ export type SvgIconProps = {
     title?: string
     focusable?: boolean
     clickHandler?: () => void
+    themeColor?: string
 }

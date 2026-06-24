@@ -1,0 +1,43 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+.education-item {
+    margin-bottom: 1.6rem;
+    padding: 1.6rem;
+    border: 1px solid var(--p-border);
+    border-radius: 1.6rem;
+    display: grid;
+    background-color: var(--p-surface);
+}
+
+.education-item__heading {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 1.4rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        line-height: 2rem;
+        color: var(--p-heading);
+    }
+}
+
+.education-item__details {
+    display: grid;
+    gap: 0.2rem;
+
+    .school {
+        font-size: 1.4rem;
+        font-family: 'Inter', sans-serif;
+        line-height: 2rem;
+        color: var(--p-accent-strong);
+    }
+}
+
+.location, .education-item__heading span {
+    font-size: 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6rem;
+    color: var(--p-muted);
+}
