@@ -3,7 +3,7 @@
 
 @mixin shrinkLabel {
     top: -1.3rem;
-    font-size: large;
+    font-size: 1.2rem;
 }
 
 .form-group {
@@ -14,21 +14,17 @@
 .form-input {
     @include base.widthAndHeight(100%, 4rem);
     padding: 0 2rem;
-    border: 0.5px solid var(--important-object-colour);
-    border-radius: 0.6rem;
-    background-color: var(--page-background-colour);
-    color: var(--page-text-colour);
-    font-family: inherit;
-    font-size: 1.6rem;
+    border: none;
+    border-radius: 1.6rem;
+    background-color: var(--p-elevated);
+    color: var(--p-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
     transition: box-shadow 300ms ease-out;
 
-    @media (min-width: 769px){
-        font-size: 1.8rem;
-    }
-
-    &:focus {
+    &:focus, &:hover {
         outline: none;
-        box-shadow: 0 0 4px 2px rgba(#000029, 0.43);
+        box-shadow: 0 2px 4px inset rgba(0, 0, 0, 0.4);
     }
 
     &:focus ~ .form-input-label {
@@ -42,7 +38,9 @@
     left: 5%;
     transform: translateY(-50%);
     transition: top 300ms ease, font-size 300ms ease;
-    color: var(--page-text-colour);
+    color: var(--p-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
 
     &.shrink {
         @include shrinkLabel;

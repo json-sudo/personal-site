@@ -22,7 +22,7 @@ const DrawerNav = () => {
         <>
             {backdrop}
 
-            <Transition in={drawerIsOpen} timeout={300}>
+            <Transition in={drawerIsOpen} timeout={250}>
                 {
                     state => (
                         <div className={`drawer-container drawer-container-${state}`}>
@@ -39,11 +39,9 @@ const DrawerNav = () => {
                             <nav>
                                 <ul className="drawer-nav">
                                     <li onClick={() => closeDrawer()}><Link to="/">About Me</Link></li>
-                                    <li onClick={() => closeDrawer()}><Link to="/resume">CV/Resume</Link></li>
+                                    <li onClick={() => closeDrawer()}><Link to="/resume">Resume</Link></li>
                                     <li onClick={() => closeDrawer()}><Link to="/projects">Projects</Link></li>
                                     <li onClick={() => closeDrawer()}><Link to="/contact-me">Leave a Message</Link></li>
-                                    <li onClick={() => closeDrawer()}><Link to="/credits">View Icon Credits</Link></li>
-                                    <li onClick={() => closeDrawer()}><Link to="/blog">Blog</Link></li>
                                 </ul>
                             </nav>
                         </div>

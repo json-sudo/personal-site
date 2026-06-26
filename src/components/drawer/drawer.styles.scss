@@ -8,8 +8,9 @@
     right: 0;
     z-index: 101;
     flex-direction: column;
-    background-color: var(--page-background-colour);
+    background-color: var(--p-header-scrolled-bg);
     box-shadow: 0 0 2px 4px rgba(black, 0.3);
+    backdrop-filter: blur(8px);
     transition: opacity 300ms ease-in-out, transform 300ms ease-out;
     transform-origin: 100% 0;
 }
@@ -61,17 +62,17 @@
 .drawer-container-exited {
     display: none;
     opacity: 0;
-    transform: scale(0);
+    transform: translateX(100%);
 }
 
 .drawer-container-entering,
 .drawer-container-exiting {
     opacity: 0.1;
-    transform: scale(0.25);
+    transform: translateX(100%);
 }
 
 .drawer-container-entered {
     display: flex;
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
 }
