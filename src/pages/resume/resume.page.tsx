@@ -15,7 +15,7 @@ const ResumePage = () => {
             <div className="resume-page-header">
                 <span className="page-label">Resume</span>
                 <a
-                    href="/files/my-resume.pdf"
+                    href="/files/Jason Omemu Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

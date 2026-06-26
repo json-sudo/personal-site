@@ -1,0 +1,60 @@
+@use '../../base-styles/base-styles.scss' as base;
+@use '../../base-styles/theme-colors.styles.scss';
+
+@mixin tag-pill {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background-color: var(--p-elevated);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--p-body);
+    line-height: 1.2;
+}
+
+.skills-card {
+    padding: 2.4rem;
+    background-color: var(--p-surface);
+    border: 1px solid var(--p-border);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skills-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.skills-card__icon {
+    @include base.widthAndHeight(4rem, 4rem);
+    border-radius: 1.6rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--p-elevated);
+
+    svg {
+        @include base.widthAndHeight(2rem, 2rem);
+    }
+}
+
+.skills-card__title {
+    font-size: 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: var(--p-heading);
+}
+
+.skills-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+
+    li {
+        @include tag-pill;
+    }
+}

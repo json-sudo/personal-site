@@ -1,11 +1,22 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import cloudinary from 'cloudinary-core'
 import { Link } from 'react-router-dom'
 
+import SkillsCard from '../../components/skills-card/skills-card.component'
+
+import BackendIcon from '../../assets/svg/backend.icon'
+import CodeIcon from '../../assets/svg/code.icon'
+import CloudIcon from '../../assets/svg/cloud.icon'
 import DownloadIcon from '../../assets/svg/download.icon'
 import GithubIcon from '../../assets/svg/github.icon'
 import LinkedInIcon from '../../assets/svg/linkedin.icon'
-import RightArrowIcon from '../../assets/svg/right-arrow.icon.tsx'
+import RightArrowIcon from '../../assets/svg/right-arrow.icon'
+
+import {
+    homeBackendSkills,
+    homeCloudSkills,
+    homeFrontendSkills,
+} from '../../data/home-skills'
 
 import './home.styles.scss'
 
@@ -126,48 +137,21 @@ const HomePage = () => {
                     </header>
 
                     <div className="skills__grid">
-                        <article className="skills__card">
-                            <h3 className="skills__card-title">Frontend</h3>
-                            <ul className="skills__tags">
-                                <li>React</li>
-                                <li>Jest</li>
-                                <li>TypeScript</li>
-                                <li>JavaScript</li>
-                                <li>SCSS</li>
-                                <li>Playwright</li>
-                                <li>Cypress</li>
-                                <li>Vite</li>
-                                <li>Accessibility</li>
-                            </ul>
-                        </article>
-
-                        <article className="skills__card">
-                            <h3 className="skills__card-title">Backend</h3>
-                            <ul className="skills__tags">
-                                <li>Node.js</li>
-                                <li>Python</li>
-                                <li>C#/.NET</li>
-                                <li>PostgreSQL</li>
-                                <li>GraphQL</li>
-                                <li>SQL</li>
-                                <li>REST APIs</li>
-                                <li>API Design</li>
-                                <li>Authentication</li>
-                            </ul>
-                        </article>
-
-                        <article className="skills__card">
-                            <h3 className="skills__card-title">Cloud & DevOps</h3>
-                            <ul className="skills__tags">
-                                <li>Docker</li>
-                                <li>CI/CD</li>
-                                <li>AWS</li>
-                                <li>Git</li>
-                                <li>Azure</li>
-                                <li>Terraform</li>
-                                <li>Kubernetes</li>
-                            </ul>
-                        </article>
+                        <SkillsCard
+                            title={homeFrontendSkills.title}
+                            skills={homeFrontendSkills.skills}
+                            icon={<CodeIcon />}
+                        />
+                        <SkillsCard
+                            title={homeBackendSkills.title}
+                            skills={homeBackendSkills.skills}
+                            icon={<BackendIcon />}
+                        />
+                        <SkillsCard
+                            title={homeCloudSkills.title}
+                            skills={homeCloudSkills.skills}
+                            icon={<CloudIcon />}
+                        />
                     </div>
                 </section>
 
